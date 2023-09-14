@@ -26,7 +26,7 @@
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
     .navbar-container{
         display: flex;
         width: 100% ;
@@ -37,11 +37,12 @@
     .divider{
         border: solid 1px gray;
     }
-
+    
     .dropdown-menu{
+        
 
     }
-
+   
 
 
 </style>
