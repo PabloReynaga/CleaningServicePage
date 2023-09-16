@@ -29,7 +29,6 @@ function changeValue(){
             </svg>
 
         </button>
-      
     </div>
     <div v-show="openSideMenu" >
             <SideBar @customChange = changeValue></SideBar>
