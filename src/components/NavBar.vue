@@ -19,7 +19,10 @@ function changeValue(){
         </div>
         
         <div class="nav-items-container">
-
+            <a href="#home" class="items">Home</a>
+            <a href="#leistung" class="items">Leistung</a>
+            <a href="#preise" class="items">Preise</a>
+            <a href="#kontakt" class="items">Kontakt</a>
         </div>
 
         <button class="dropdown-menu-button" @click="openSideMenu=!openSideMenu" >
@@ -76,7 +79,30 @@ function changeValue(){
     .dropdown-menu-button:hover{
         background-color: $grey;
     }
-   
+    .nav-items-container{
+        text-decoration: none;
+        font-size: 14px ;
+
+    }
+    .items{
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 22px;
+        color: $grey;
+    }
+    .items:hover{
+        color: $black;
+    }
+    
+    @media only screen and (min-width:650px){
+    .dropdown-menu-button{
+            display: none;
+    }   }
+   @media only screen and (max-width:650px){
+    .nav-items-container{
+        display: none;
+    }
+   }
 
 
 </style>

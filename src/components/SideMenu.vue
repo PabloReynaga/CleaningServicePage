@@ -35,10 +35,8 @@ import { ref } from "vue";
     transition: 3s;
     background-color: $grey;
     transition: all 2s ease-in;
-
-
-
 }
+
 
 .divider{
         border: solid 1px $grey;
@@ -60,9 +58,7 @@ import { ref } from "vue";
         margin: 10px 50px 0px 0px;
         transform: 3s;
     }
-    .dropdown-menu-button:hover{
-       
-    }
+   
     
     .x-img{
         height: 30px;
