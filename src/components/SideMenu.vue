@@ -34,9 +34,10 @@ import { ref } from "vue";
     position: absolute;
     transition: 3s;
     background-color: $grey;
-    transition: all 2s ease-in;
+    animation-name: sideBarSmooth;
+    animation-duration: .7s;
+  
 }
-
 
 .divider{
         border: solid 1px $grey;
@@ -66,5 +67,19 @@ import { ref } from "vue";
         opacity: 0.6;
         padding-top: 2px;
     }
+
+    @keyframes sideBarSmooth{
+        0%{
+            width: 5%;
+            background-color: $white ;
+
+        }
+        
+        100%{
+            width: 50%;
+            background-color: $grey;
+        }
+    }
+   
 
 </style>
