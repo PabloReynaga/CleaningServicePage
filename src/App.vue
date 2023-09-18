@@ -1,7 +1,7 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
 import "../src/assets/main.scss"
-import Home from './components/Home.vue';
+import Home from '././components/section/Home.vue';
 
 
 </script>
