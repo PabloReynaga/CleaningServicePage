@@ -1,12 +1,13 @@
 <script setup>
 
-const props = defineProps(['slides']);
+
+const props = defineProps(['slide']);
 
 
 </script>
 <template>
     <div>
-        <div class="carousel-item" v-for="slide in slides" :key="slide">
+        <div class="carousel-item">
                 <div class="img-container">
                     <img class="img" :src="slide" >
                 </div>
