@@ -38,6 +38,7 @@ import { ref } from "vue";
     background-color: $grey;
     animation-name: sideBarSmooth;
     animation-duration: .7s;
+    z-index: 100;
   
 }
 

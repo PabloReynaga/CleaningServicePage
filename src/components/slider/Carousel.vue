@@ -38,4 +38,17 @@ const props= defineProps(['slides']);
     width: 100%;
 
 }
+.carousel{
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-inner{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+
+}
 </style>
