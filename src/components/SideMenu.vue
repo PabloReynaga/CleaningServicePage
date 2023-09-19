@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from "vue";
 
-
+//router.aftereach(()=>{
+    //setTimeout(fun,timeout)
+//})
 
 
 </script>
@@ -83,3 +85,4 @@ import { ref } from "vue";
    
 
 </style>
+
