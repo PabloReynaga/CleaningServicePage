@@ -37,7 +37,9 @@ function changeValue(){
     <Transition>
         <div v-show="openSideMenu" >
             <SideBar :closed-side-bar="openSideMenu" @customChange = changeValue ></SideBar>
-            <div :class="[openSideMenu? 'transparent-block': 'transparent-block-close']"></div>
+            <div :class="[openSideMenu? 'transparent-block': 'transparent-block-close']">
+                <button class="button-transparent-block" @click="changeValue()"></button>
+            </div>
         </div> 
         
     </Transition> 
@@ -149,6 +151,13 @@ function changeValue(){
    .v-enter-active,
     .v-leave-active {
     transition: opacity 2s ease;
+}
+
+.button-transparent-block{
+    background-color: transparent;
+    width: 50%;
+    height: 100%;
+    border: none;
 }
   
 
