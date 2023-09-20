@@ -35,6 +35,7 @@ function changeValue(){
     </div>
     <div v-show="openSideMenu" >
             <SideBar @customChange = changeValue></SideBar>
+            <div class="transparent-block"></div>
         </div> 
         
     <div class="divider"></div>
@@ -102,6 +103,28 @@ function changeValue(){
     .nav-items-container{
         display: none;
     }
+   }
+   .transparent-block{
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    background-color: $black;
+    width: 100%;
+    height: 100%;
+    font-size: 100px;
+    opacity: 0.8;
+    animation-name: smoothTrasparentBlock;
+    animation-duration: .7s;
+    
+   }
+   @keyframes smoothTrasparentBlock{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+
    }
 
 

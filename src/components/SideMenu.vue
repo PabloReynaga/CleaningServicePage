@@ -9,8 +9,8 @@ import { ref } from "vue";
 </script>
 
 <template>
-    
-    <div class="side-menu-container"  >
+    <div>
+        <div class="side-menu-container"  >
         <div class="side-menu-header">
             <button class="dropdown-menu-button" @click="$emit('customChange')">
                 <img class="x-img" src="../icon/x.png" alt="">
@@ -18,13 +18,10 @@ import { ref } from "vue";
 
         </div>
         <div class="divider"></div>
-        <div class="side-menu-body">
-
-        </div>
-
-
+        <div class="side-menu-body"></div>
     </div>
-
+    </div>
+   
 </template>
 
 <style scoped lang="scss">
@@ -38,7 +35,7 @@ import { ref } from "vue";
     background-color: $grey;
     animation-name: sideBarSmooth;
     animation-duration: .7s;
-    z-index: 100;
+    z-index: 200;
   
 }
 
@@ -83,7 +80,7 @@ import { ref } from "vue";
             background-color: $grey;
         }
     }
-   
+
 
 </style>
 
