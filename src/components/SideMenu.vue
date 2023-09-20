@@ -1,25 +1,35 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+
+
+
+
+const props = defineProps(['closedSideBar'])
 
 //router.aftereach(()=>{
     //setTimeout(fun,timeout)
 //})
 
 
+
 </script>
 
 <template>
     <div>
-        <div class="side-menu-container"  >
+        <Transition>
+            <div :class="[closedSideBar? 'side-menu-container' : 'close-side-menu-container' ]"  >
         <div class="side-menu-header">
-            <button class="dropdown-menu-button" @click="$emit('customChange')">
+            <button class="dropdown-menu-button" @click="($emit('customChange'))">
                 <img class="x-img" src="../icon/x.png" alt="">
             </button>
 
         </div>
         <div class="divider"></div>
         <div class="side-menu-body"></div>
-    </div>
+        </div>
+            
+        </Transition>
+       
     </div>
    
 </template>
@@ -38,6 +48,21 @@ import { ref } from "vue";
     z-index: 200;
   
 }
+.close-side-menu-container{
+    height: 100%;
+    width: 0%;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    transition: 1s;
+    background-color: transparent;
+    animation-name: sideBarSmooth;
+    animation-duration: .2s;
+    z-index: 200;
+
+        
+    }
+   
 
 .divider{
         border: solid 1px $grey;
@@ -59,7 +84,12 @@ import { ref } from "vue";
         margin: 10px 50px 0px 0px;
         transform: 3s;
     }
-   
+
+    .v-enter-active,
+    .v-leave-active {
+    transition: opacity 2s ease;
+}
+    
     
     .x-img{
         height: 30px;

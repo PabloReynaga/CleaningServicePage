@@ -4,6 +4,7 @@ import { ref } from 'vue';
 
 const openSideMenu = ref(false);
 
+
 function changeValue(){
      openSideMenu.value = !openSideMenu
 }
@@ -33,11 +34,13 @@ function changeValue(){
 
         </button>
     </div>
-    <div v-show="openSideMenu" >
-            <SideBar @customChange = changeValue></SideBar>
-            <div class="transparent-block"></div>
+    <Transition>
+        <div v-show="openSideMenu" >
+            <SideBar :closed-side-bar="openSideMenu" @customChange = changeValue ></SideBar>
+            <div :class="[openSideMenu? 'transparent-block': 'transparent-block-close']"></div>
         </div> 
         
+    </Transition> 
     <div class="divider"></div>
     
     
@@ -104,6 +107,15 @@ function changeValue(){
         display: none;
     }
    }
+   @keyframes smoothTrasparentBlock{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+
+   }
    .transparent-block{
     position: absolute;
     right: 0;
@@ -115,17 +127,30 @@ function changeValue(){
     opacity: 0.8;
     animation-name: smoothTrasparentBlock;
     animation-duration: .7s;
+    transition: 3s;
+    
     
    }
-   @keyframes smoothTrasparentBlock{
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 100%;
-    }
-
+   .transparent-block-close{
+    position: absolute;
+    right: 0;
+    z-index: 200;
+    background-color: transparent;
+    width: 0%;
+    height: 100%;
+    font-size: 100px;
+    opacity: 0.8;
+    animation-name: smoothTrasparentBlock;
+    animation-duration: .3s;
+    transition: .6s;
+   
+   
    }
+   .v-enter-active,
+    .v-leave-active {
+    transition: opacity 2s ease;
+}
+  
 
 
 </style>
