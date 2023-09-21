@@ -1,9 +1,28 @@
 <script setup>
 
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import CarouselItem from './CarouselItem.vue';
 
 const props= defineProps(['slides']);
+const currentSlide = ref(0);
+const slideInterval = ref(null);
 
+function SetCurrentSlide(index){
+    currentSlide.value = index;
+
+}
+
+onMounted(()=>{
+    slideInterval === setInterval(()=>{
+        const index = currentSlide.value < props.slides.length -1 ? currentSlide.value + 1 : 0; 
+        SetCurrentSlide(index);
+    }, 3000)
+
+})
+onBeforeUnmount(()=>{
+    clearInterval(slideInterval.value)
+
+})
 </script>
 
 <template>
@@ -12,7 +31,9 @@ const props= defineProps(['slides']);
             <CarouselItem 
             v-for="(slide, index) in slides" 
             :slide="slide" 
-            :key="`item-${index}`">
+            :key="`item-${index}`"
+            :current-slide="currentSlide"
+            :index="index">
             </CarouselItem>
         </div>
         <div class="title-container">

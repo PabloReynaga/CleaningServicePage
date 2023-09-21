@@ -144,13 +144,13 @@ function changeValue(){
     opacity: 0.8;
     animation-name: smoothTrasparentBlock;
     animation-duration: .3s;
-    transition: .6s;
+    transition: .5s;
    
    
    }
    .v-enter-active,
     .v-leave-active {
-    transition: opacity 2s ease;
+    transition: opacity .6s ease;
 }
 
 .button-transparent-block{

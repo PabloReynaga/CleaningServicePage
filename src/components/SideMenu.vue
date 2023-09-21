@@ -16,7 +16,7 @@ const props = defineProps(['closedSideBar'])
 
 <template>
     <div>
-        <Transition>
+       
             <div :class="[closedSideBar? 'side-menu-container' : 'close-side-menu-container' ]"  >
         <div class="side-menu-header">
             <button class="dropdown-menu-button" @click="($emit('customChange'))">
@@ -28,7 +28,7 @@ const props = defineProps(['closedSideBar'])
         <div class="side-menu-body"></div>
         </div>
             
-        </Transition>
+      
        
     </div>
    
@@ -54,7 +54,7 @@ const props = defineProps(['closedSideBar'])
     top: 0px;
     right: 0px;
     position: absolute;
-    transition: 1s;
+    transition: .8s;
     background-color: transparent;
     animation-name: sideBarSmooth;
     animation-duration: .2s;
@@ -85,10 +85,7 @@ const props = defineProps(['closedSideBar'])
         transform: 3s;
     }
 
-    .v-enter-active,
-    .v-leave-active {
-    transition: opacity 2s ease;
-}
+
     
     
     .x-img{

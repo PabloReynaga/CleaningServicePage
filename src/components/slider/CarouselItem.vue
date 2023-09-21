@@ -1,15 +1,18 @@
 <script setup>
 
 
-const props = defineProps(['slide']);
+const props = defineProps(['slide', 'currentSlide', 'index']);
 
 
 </script>
 <template>
     <div>
         <div class="carousel-item">
-                <div class="img-container">
+                <div class="img-container" 
+                v-show="currentSlide === index">
+
                     <img class="img" :src="slide" >
+                    
                 </div>
         </div>
 
