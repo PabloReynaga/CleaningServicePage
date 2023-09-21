@@ -1,11 +1,17 @@
-<script setup>
+<script setup lang="ts">
 
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import CarouselItem from './CarouselItem.vue';
 
-const props= defineProps(['slides']);
+const props = defineProps({
+    slides: {
+        type: Array,
+        default: [],
+        required: true
+    }
+});
 const currentSlide = ref(0);
-const slideInterval = ref(null);
+const slideInterval = ref(0);
 
 function SetCurrentSlide(index){
     currentSlide.value = index;
@@ -13,7 +19,7 @@ function SetCurrentSlide(index){
 }
 
 onMounted(()=>{
-    slideInterval === setInterval(()=>{
+    slideInterval.value = setInterval(()=>{
         const index = currentSlide.value < props.slides.length -1 ? currentSlide.value + 1 : 0; 
         SetCurrentSlide(index);
     }, 3000)
