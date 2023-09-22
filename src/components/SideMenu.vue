@@ -1,16 +1,10 @@
 <script setup>
 import { onMounted, ref } from "vue";
-
-
-
-
 const props = defineProps(['closedSideBar'])
 
 //router.aftereach(()=>{
     //setTimeout(fun,timeout)
 //})
-
-
 
 </script>
 
@@ -84,10 +78,6 @@ const props = defineProps(['closedSideBar'])
         margin: 10px 50px 0px 0px;
         transform: 3s;
     }
-
-
-    
-    
     .x-img{
         height: 30px;
         width: 30px;
