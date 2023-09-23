@@ -35,20 +35,20 @@ onMounted(()=>{
     startSlideTimer();
 })
 
-function prev(){
-        const index = currentSlide.value > 0 ? currentSlide.value - 1 : props.slides.length - 1; 
+function prev(step = - 1){
+        const index = currentSlide.value > 0 ? currentSlide.value + step : props.slides.length - 1; 
         SetCurrentSlide(index);
         direction.value = "left" 
         startSlideTimer();
 }
-function _next(){
-    const index = currentSlide.value < props.slides.length -1 ? currentSlide.value + 1 : 0; 
+function _next(step = 1){
+    const index = currentSlide.value < props.slides.length -1 ? currentSlide.value + step : 0; 
         SetCurrentSlide(index); 
         direction.value = "right"
 
 }
-function next(){
-        _next();
+function next(step = 1){
+        _next(step);
         startSlideTimer();
 }
 
@@ -56,12 +56,21 @@ onBeforeUnmount(()=>{
     stopSlideTimer();
 
 })
+function switchSlide(index){
+    const step = index - currentSlide.value;
+    if(step>0){
+        next(step)
+    }else{
+        prev(step)
+    }
+}
 
 </script>
 
 <template>
     <div class="carousel">
         <div class="carousel-inner">
+            
             <CarouselItem 
             v-for="(slide, index) in slides" 
             :slide="slide" 
@@ -70,8 +79,15 @@ onBeforeUnmount(()=>{
             :index="index"
             :direction="direction">
             </CarouselItem>
+            
             <CarouselControls @prev="prev" @next="next"></CarouselControls>
-            <CarouselIndicator></CarouselIndicator>
+            
+            <CarouselIndicator 
+            :total="slides.length"
+            :current-index="currentSlide"
+            @switch="switchSlide($event)"
+            >
+            </CarouselIndicator>
         </div>
         <div class="title-container">
             <h1 class="title-home">Schön Sauber</h1>
