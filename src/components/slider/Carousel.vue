@@ -2,6 +2,10 @@
 
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import CarouselItem from './CarouselItem.vue';
+import CarouselControls from './CarouselControls.vue';
+
+const currentSlide = ref(0);
+const slideInterval = ref(0);
 
 const props = defineProps({
     slides: {
@@ -10,8 +14,6 @@ const props = defineProps({
         required: true
     }
 });
-const currentSlide = ref(0);
-const slideInterval = ref(0);
 
 function SetCurrentSlide(index){
     currentSlide.value = index;
@@ -19,16 +21,26 @@ function SetCurrentSlide(index){
 }
 
 onMounted(()=>{
-    slideInterval.value = setInterval(()=>{
-        const index = currentSlide.value < props.slides.length -1 ? currentSlide.value + 1 : 0; 
-        SetCurrentSlide(index);
-    }, 3000)
-
+    //slideInterval.value = setInterval(()=>{
+     //  prev();
+    //}, 3000)
 })
+
+function prev(){
+    const index = currentSlide.value < 0 ? currentSlide.value - 1 : props.slides.length - 1; 
+        SetCurrentSlide(index);
+    
+}
+function next(){
+        const index = currentSlide.value < props.slides.length -1 ? currentSlide.value + 1 : 0; 
+        SetCurrentSlide(index); 
+}
+
 onBeforeUnmount(()=>{
     clearInterval(slideInterval.value)
 
 })
+
 </script>
 
 <template>
@@ -41,6 +53,7 @@ onBeforeUnmount(()=>{
             :current-slide="currentSlide"
             :index="index">
             </CarouselItem>
+            <CarouselControls @prev="prev" @next="next"></CarouselControls>
         </div>
         <div class="title-container">
             <h1 class="title-home">Schön Sauber</h1>

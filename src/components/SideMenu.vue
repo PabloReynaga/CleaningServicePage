@@ -1,10 +1,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 const props = defineProps(['closedSideBar'])
-
-//router.aftereach(()=>{
-    //setTimeout(fun,timeout)
-//})
+const emit = defineEmits(['customChange'])
 
 </script>
 
