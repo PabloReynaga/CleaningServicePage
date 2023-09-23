@@ -3,6 +3,7 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import CarouselItem from './CarouselItem.vue';
 import CarouselControls from './CarouselControls.vue';
+import CarouselIndicator from './CarouselIndicator.vue'
 
 const currentSlide = ref(0);
 const slideInterval = ref(0);
@@ -70,6 +71,7 @@ onBeforeUnmount(()=>{
             :direction="direction">
             </CarouselItem>
             <CarouselControls @prev="prev" @next="next"></CarouselControls>
+            <CarouselIndicator></CarouselIndicator>
         </div>
         <div class="title-container">
             <h1 class="title-home">Schön Sauber</h1>
@@ -97,11 +99,12 @@ onBeforeUnmount(()=>{
 .carousel{
     display: flex;
     justify-content: center;
+   
 }
 
 .carousel-inner{
     position:absolute;
-    height: 100%;
+    height: calc(100% - 4rem);
     width: 100%;
     overflow: hidden;
     
