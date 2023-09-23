@@ -1,12 +1,16 @@
 <script setup>
+import { computed } from 'vue';
 
+const props = defineProps(['slide', 'currentSlide', 'index', 'direction']);
 
-const props = defineProps(['slide', 'currentSlide', 'index']);
-
+const transitionEffect = computed(()=>{
+    return props.direction === "right"? "slide-out" : "slide-in";
+    
+})
 
 </script>
 <template>
-    <transition name="slide-in"> 
+    <transition :name="transitionEffect"> 
                 <div class="img-container" v-show="currentSlide === index">
                     <img class="img" :src="slide" >
                 </div>
@@ -31,7 +35,9 @@ const props = defineProps(['slide', 'currentSlide', 'index']);
 
 }
 .slide-in-enter-active, 
-.slide-in-leave-active{
+.slide-in-leave-active,
+.slide-out-enter-active, 
+.slide-out-leave-active{
     transition: all 1s ease-in-out;
 }
 .slide-in-enter-from{
@@ -39,5 +45,11 @@ const props = defineProps(['slide', 'currentSlide', 'index']);
 }
 .slide-in-leave-to{
     transform: translateX(100%);
+}
+.slide-out-enter-from{
+    transform: translateX(100%);
+}
+.slide-out-leave-to{
+    transform: translateX(-100%);
 }
 </style>

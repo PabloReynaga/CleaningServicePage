@@ -6,6 +6,7 @@ import CarouselControls from './CarouselControls.vue';
 
 const currentSlide = ref(0);
 const slideInterval = ref(0);
+const direction = ref("right");
 
 const props = defineProps({
     slides: {
@@ -19,25 +20,39 @@ function SetCurrentSlide(index){
     currentSlide.value = index;
 
 }
+function startSlideTimer(){
+    stopSlideTimer();
+    slideInterval.value = setInterval(()=>{
+        _next();
+    }, 5000)
+}
+function stopSlideTimer(){
+    clearInterval(slideInterval.value)
+}
 
 onMounted(()=>{
-    //slideInterval.value = setInterval(()=>{
-     //  prev();
-    //}, 3000)
+    startSlideTimer();
 })
 
 function prev(){
-    const index = currentSlide.value < 0 ? currentSlide.value - 1 : props.slides.length - 1; 
+        const index = currentSlide.value > 0 ? currentSlide.value - 1 : props.slides.length - 1; 
         SetCurrentSlide(index);
-    
+        direction.value = "left" 
+        startSlideTimer();
+}
+function _next(){
+    const index = currentSlide.value < props.slides.length -1 ? currentSlide.value + 1 : 0; 
+        SetCurrentSlide(index); 
+        direction.value = "right"
+
 }
 function next(){
-        const index = currentSlide.value < props.slides.length -1 ? currentSlide.value + 1 : 0; 
-        SetCurrentSlide(index); 
+        _next();
+        startSlideTimer();
 }
 
 onBeforeUnmount(()=>{
-    clearInterval(slideInterval.value)
+    stopSlideTimer();
 
 })
 
@@ -51,7 +66,8 @@ onBeforeUnmount(()=>{
             :slide="slide" 
             :key="`item-${index}`"
             :current-slide="currentSlide"
-            :index="index">
+            :index="index"
+            :direction="direction">
             </CarouselItem>
             <CarouselControls @prev="prev" @next="next"></CarouselControls>
         </div>
