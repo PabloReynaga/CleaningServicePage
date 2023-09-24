@@ -25,7 +25,7 @@ function startSlideTimer(){
     stopSlideTimer();
     slideInterval.value = setInterval(()=>{
         _next();
-    }, 5000)
+    }, 4000)
 }
 function stopSlideTimer(){
     clearInterval(slideInterval.value)
