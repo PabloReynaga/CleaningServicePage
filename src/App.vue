@@ -2,12 +2,11 @@
 import NavBar from './components/NavBar.vue';
 import "../src/assets/main.scss"
 import Home from '././components/section/Home.vue';
-
+import Leistung from './components/section/Leistung.vue';
 
 </script>
 
 <template>
-  <div>
     <header>
       <NavBar/>
     </header>
@@ -16,19 +15,17 @@ import Home from '././components/section/Home.vue';
         <Home/>
     </section>
     <section id="leistung">
-      
+        <Leistung/>
     </section>
     <section id="preise">
-      
+      preise
     </section>
     <section id="kontakt">
-      
+      kontakt
     </section>
   
 
   </body>
-
-  </div>
 </template>
 
 <style scoped>

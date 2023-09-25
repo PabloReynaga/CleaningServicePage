@@ -1,0 +1,38 @@
+<script setup>
+import PhotosPres from '../PhotosPres.vue';
+
+</script>
+<template>
+
+<div class="main-container">
+    <div class="container">
+        <h1 class="title">Über uns</h1>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos neque ad assumenda mollitia ea eaque laboriosam amet dignissimos, quibusdam aliquam consequatur sapiente dolorem culpa, vero, ipsum eveniet dicta veritatis eum!0</p>
+    </div>
+    <div class="container">
+        <h1 class="title">Leistung</h1>
+        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos neque ad assumenda mollitia ea eaque laboriosam amet dignissimos, quibusdam aliquam consequatur sapiente dolorem culpa, vero, ipsum eveniet dicta veritatis eum!0</p>
+    </div>
+    <div class="photos-container">
+        <PhotosPres></PhotosPres>
+        
+    </div>
+</div>
+
+</template>
+<style lang="scss">
+.title{
+    justify-content: center;
+    display: flex;
+    
+}
+.text{
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    line-height: 1.8;
+}
+
+
+</style>

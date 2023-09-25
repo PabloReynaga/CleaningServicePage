@@ -113,7 +113,7 @@ function switchSlide(index){
 
 }
 .carousel{
-    display: flex;
+    display: block;
     justify-content: center;
    
 }
