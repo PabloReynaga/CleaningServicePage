@@ -20,7 +20,7 @@ function changeValue(){
         </div>
         
         <div class="nav-items-container">
-            <a href="#home" class="items">Home</a>
+            <a href="#home" class="items activo">Home</a>
             <a href="#leistung" class="items">Leistung</a>
             <a href="#preise" class="items">Preise</a>
             <a href="#kontakt" class="items">Kontakt</a>
@@ -158,6 +158,9 @@ function changeValue(){
     width: 50%;
     height: 100%;
     border: none;
+}
+.activo{
+    color: $black;
 }
   
 

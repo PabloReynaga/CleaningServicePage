@@ -11,7 +11,7 @@ import PhotosPres from '../PhotosPres.vue';
     </div>
     <div class="container">
         <h1 class="title">Leistung</h1>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos neque ad assumenda mollitia ea eaque laboriosam amet dignissimos, quibusdam aliquam consequatur sapiente dolorem culpa, vero, ipsum eveniet dicta veritatis eum!0</p>
+        <p class="text botton">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos neque ad assumenda mollitia ea eaque laboriosam amet dignissimos, quibusdam aliquam consequatur sapiente dolorem culpa, vero, ipsum eveniet dicta veritatis eum!0</p>
     </div>
     <div class="photos-container">
         <PhotosPres></PhotosPres>
@@ -20,7 +20,7 @@ import PhotosPres from '../PhotosPres.vue';
 </div>
 
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .title{
     justify-content: center;
     display: flex;
@@ -32,7 +32,9 @@ import PhotosPres from '../PhotosPres.vue';
     margin-left: 20%;
     margin-right: 20%;
     line-height: 1.8;
+    text-align: center;
 }
+
 
 
 </style>
