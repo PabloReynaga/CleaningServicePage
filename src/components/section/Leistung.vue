@@ -21,10 +21,14 @@ import PhotosPres from '../PhotosPres.vue';
 
 </template>
 <style lang="scss" scoped>
+
+.main-container{
+    
+}
 .title{
     justify-content: center;
     display: flex;
-    
+    padding-top: 25px ;
 }
 .text{
     display: flex;
@@ -33,6 +37,7 @@ import PhotosPres from '../PhotosPres.vue';
     margin-right: 20%;
     line-height: 1.8;
     text-align: center;
+    
 }
 
 

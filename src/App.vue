@@ -3,7 +3,7 @@ import NavBar from './components/NavBar.vue';
 import "../src/assets/main.scss"
 import Home from '././components/section/Home.vue';
 import Leistung from './components/section/Leistung.vue';
-
+import Preise from './components/section/Preise.vue'
 </script>
 
 <template>
@@ -18,7 +18,7 @@ import Leistung from './components/section/Leistung.vue';
         <Leistung/>
     </section>
     <section id="preise">
-      preise
+      <Preise/>
     </section>
     <section id="kontakt">
       kontakt
@@ -27,7 +27,3 @@ import Leistung from './components/section/Leistung.vue';
 
   </body>
 </template>
-
-<style scoped>
-
-</style>

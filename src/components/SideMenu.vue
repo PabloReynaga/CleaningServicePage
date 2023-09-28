@@ -6,9 +6,9 @@ const emit = defineEmits(['customChange'])
 </script>
 
 <template>
-    <div>
+    <div class="main-container">
        
-            <div :class="[closedSideBar? 'side-menu-container' : 'close-side-menu-container' ]"  >
+        <div :class="[closedSideBar? 'side-menu-container' : 'close-side-menu-container' ]"  >
         <div class="side-menu-header">
             <button class="dropdown-menu-button" @click="($emit('customChange'))">
                 <img class="x-img" src="../icon/x.png" alt="">
@@ -95,6 +95,6 @@ const emit = defineEmits(['customChange'])
         }
     }
 
-
+   
 </style>
 

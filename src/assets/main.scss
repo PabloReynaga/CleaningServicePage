@@ -8,7 +8,8 @@ html,body,h1{
   font-family: system-ui;
 }
 section{
-  min-height: 100vh;
+  min-height: calc(100vh - 4rem);
+  min-width: 100vw;
   
 }
 p{

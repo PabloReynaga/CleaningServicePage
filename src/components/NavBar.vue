@@ -43,7 +43,7 @@ function changeValue(){
         </div> 
         
     </Transition> 
-    <div class="divider"></div>
+ 
     
     
     </div>
@@ -124,7 +124,7 @@ function changeValue(){
     z-index: 100;
     background-color: $black;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 4rem);
     font-size: 100px;
     opacity: 0.8;
     animation-name: smoothTrasparentBlock;
@@ -139,7 +139,7 @@ function changeValue(){
     z-index: 200;
     background-color: transparent;
     width: 0%;
-    height: 100%;
+    height: calc(100% - 4rem);
     font-size: 100px;
     opacity: 0.8;
     animation-name: smoothTrasparentBlock;
@@ -156,7 +156,7 @@ function changeValue(){
 .button-transparent-block{
     background-color: transparent;
     width: 50%;
-    height: 100%;
+    height: calc(100% - 4rem);
     border: none;
 }
 .activo{

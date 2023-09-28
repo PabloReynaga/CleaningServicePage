@@ -105,7 +105,7 @@ function switchSlide(index){
     right: 0;
     color: $white;
     font-size: 40px;
-    top:300px;
+    top:150px;
 }
 .title-container{
    
@@ -123,6 +123,7 @@ function switchSlide(index){
     height: calc(100% - 4rem);
     width: 100%;
     overflow: hidden;
+    
     
 
 }

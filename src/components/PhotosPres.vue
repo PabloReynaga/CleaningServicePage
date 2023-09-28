@@ -1,71 +1,74 @@
 <script setup>
+import {useWindowScroll} from '@vueuse/core'
+import { computed, onMounted, onUpdated, ref } from 'vue';
+const { x , y} = useWindowScroll();
+
+
+
+
+
 
 
 </script>
+
 <template>
     <div class="container-img">
         <img src="./img/layout.png" alt="" class="img">
         <h1 class="title">Unsere Services</h1>
+        <div class="divider"></div>
         <div class="items-main-container">
             <div class="items-inner-container">
                
                 <div class="item">
                     <p class="text">
-                    Büroreinigung
+                    -Büroreinigung-
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        Glasreinigung
+                        -Glasreinigung-
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        Küchen
+                        -Küchen-
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        Toilettenreinigung
+                         -Toiletten-
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        Bars
+                        -Bars-
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        Konferenzräume
+                        -Konferenzräume-
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        Praxisreinigung
+                        -Praxisreinigung-
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        Lagerhallen
+                        -Lagerhallen-
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        Schulen
+                        -Schulen-
                     </p>
                 </div>
                
                 
             </div>             
         </div>
-        <div class="div-empty"></div>
     </div>
- 
-    
-    
-
-   
-
 </template>
 <style lang="scss" scoped>
 .container-img{
@@ -80,10 +83,30 @@
     width: 100%;
     height: 100%;
     object-fit:cover;
-    object-position:center ;
-  
+    object-position:0%;
+    animation-name: smoothMoves;
+    animation-duration: 3s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    opacity: .9;
+    filter: brightness(.5);
 }
 
+@keyframes smoothMoves{
+    0%{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        object-position:0%;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        object-position:58%;
+        transition: 5s;
+    }
+}
 .items-main-container{
     left: 0;
     position: absolute;
@@ -126,22 +149,25 @@
 .text{
     display: block;
     justify-content: left;
-    width: 175px;
+    width: 170px;
     height: auto;
-    border-radius: 10%;
+    border-radius: 5%;
     font-size: 20px;
     padding: 5px;
+    
+    background-color: $white;
 }
+
 .title{
     position: absolute;
-    margin-top: 30px;
+    margin-top: 15px;
 }
-@keyframes smoothMoves{
-    0%{
-        color: $black;
+
+.divider{
+        border: solid 1px $white;
+        width: 100%;
+        position: absolute;
+        z-index: 500;
+        margin-top: 65px;
     }
-    100%{
-        color: $black;
-    }
-}
 </style>
