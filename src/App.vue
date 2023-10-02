@@ -4,6 +4,7 @@ import "../src/assets/main.scss"
 import Home from '././components/section/Home.vue';
 import Leistung from './components/section/Leistung.vue';
 import Preise from './components/section/Preise.vue'
+import Kontakt from './components/section/Kontakt.vue';
 </script>
 
 <template>
@@ -21,7 +22,7 @@ import Preise from './components/section/Preise.vue'
       <Preise/>
     </section>
     <section id="kontakt">
-      kontakt
+      <Kontakt/>
     </section>
   
 

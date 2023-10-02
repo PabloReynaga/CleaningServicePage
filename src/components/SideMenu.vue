@@ -28,12 +28,12 @@ const emit = defineEmits(['customChange'])
 <style scoped lang="scss">
 .side-menu-container{
     height: 100%;
-    width: 50%;
+    width: 65%;
     top: 0px;
     right: 0px;
     position: absolute;
     transition: 3s;
-    background-color: $grey;
+    background-color: $white;
     animation-name: sideBarSmooth;
     animation-duration: .7s;
     z-index: 200;
@@ -90,8 +90,8 @@ const emit = defineEmits(['customChange'])
         }
         
         100%{
-            width: 50%;
-            background-color: $grey;
+            width: 65%;
+            background-color: $white;
         }
     }
 
