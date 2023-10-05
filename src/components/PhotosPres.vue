@@ -21,47 +21,47 @@ const { x , y} = useWindowScroll();
                
                 <div class="item">
                     <p class="text">
-                    -Büroreinigung-
+                    Büroreinigung
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        -Glasreinigung-
+                        Glasreinigung
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        -Küchen-
+                        Küchen
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                         -Toiletten-
+                         Toiletten
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        -Bars-
+                        Bars
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        -Konferenzräume-
+                        Konferenzräume
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        -Praxisreinigung-
+                        Praxisreinigung
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        -Lagerhallen-
+                        Lagerhallen
                     </p>
                 </div>
                 <div class="item">
                     <p class="text">
-                        -Schulen-
+                        Schulen
                     </p>
                 </div>
                
@@ -154,8 +154,8 @@ const { x , y} = useWindowScroll();
     border-radius: 5%;
     font-size: 20px;
     padding: 5px;
+    color: $white;
     
-    background-color: $white;
 }
 
 .title{

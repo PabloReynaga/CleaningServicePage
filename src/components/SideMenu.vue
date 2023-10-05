@@ -17,10 +17,17 @@ const emit = defineEmits(['customChange'])
         </div>
         <div class="divider"></div>
         <div class="side-menu-body">
-            <a href="#home" class="items home">Home</a>
-            <a href="#leistung" class="items leistung">Leistug</a>
-            <a href="#preise" class="items preise">Preise</a>
-            <a href="#kontakt" class="items kontakt">Kontakt</a>
+            <a href="#home" class="items home" @click="($emit('customChange'))">Home</a>
+            <div class="line"></div>
+            <a href="#leistung" class="items leistung" @click="($emit('customChange'))">Leistug</a>
+            <div class="line"></div>
+            <a href="#preise" class="items preise" @click="($emit('customChange'))">Preise</a>
+            <div class="line"></div>
+            <a href="#kontakt" class="items kontakt" @click="($emit('customChange'))">Kontakt</a>
+            <div class="line"></div>
+            <div class="footer-sidemenu">
+      
+            </div>
         </div>
         </div>
             
@@ -32,7 +39,7 @@ const emit = defineEmits(['customChange'])
 
 <style scoped lang="scss">
 .side-menu-container{
-    height: 100%;
+    height: calc(100% - 1px) ;
     width: 65%;
     top: 0px;
     right: 0px;
@@ -42,6 +49,7 @@ const emit = defineEmits(['customChange'])
     animation-name: sideBarSmooth;
     animation-duration: .7s;
     z-index: 200;
+   
   
 }
 .close-side-menu-container{
@@ -55,6 +63,7 @@ const emit = defineEmits(['customChange'])
     animation-name: sideBarSmooth;
     animation-duration: .2s;
     z-index: 200;
+    opacity: 0;
 
         
     }
@@ -100,6 +109,47 @@ const emit = defineEmits(['customChange'])
         }
     }
 
+
+.items{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 27px;
+    margin: 30px;
+    color: $black;
+    vertical-align: center; 
+    transform: translateX( 10%);
    
+   
+
+    
+   
+}
+.side-menu-body{
+    
+    width: auto;
+    height: auto;
+
+}
+.line{
+    position: relative;
+    width: 85%;
+    margin-left: auto;
+    border: 1px solid $grey;
+ 
+    
+}
+.footer-sidemenu{
+    position: absolute;
+    z-index: 2000;
+    bottom: 0px;
+    top: 100%;
+    transform: translateY(-100%);
+    left: 0;
+    right: 0;
+    height: 5%;
+    border: 1px solid $grey;
+   
+}
 </style>
 
