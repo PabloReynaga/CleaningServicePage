@@ -14,6 +14,53 @@
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         </div>
+        <h1 class="title kontakt">Kontakt</h1>
+        <p class="title">So können Sie mit Uns Kontakt aufnehmen.</p>
+
+        <div class="formular-info-contaier">
+          <div class="info-kontakt">
+            <h3 class="subtitle">Telefon</h3>
+            <p class="text-subtitle">17661297136 / 040 49205376</p>
+            <h3 class="subtitle">Email</h3>
+            <p class="text-subtitle">
+            info@multicleancompany.com
+            </p>
+            <h3 class="subtitle">Adresse</h3>
+            <p class="text-subtitle">
+            Bethovenstraße
+            22083 Hamburg</p>
+            <h3 class="subtitle"></h3>
+          </div>
+          <div class="formular">
+            
+            <div class="container-input">
+                <div class="header-titulos">
+                    <h1 class="title">Formular</h1>
+                    <p class="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </div>
+                
+                <form action="https://formsubmit.co/" method="post">
+                    
+                <label class="label-input"  for="name">Name / Firma (Pflichfeld)*</label>
+                <input class="input-field name" type="text" id="name" required name="Nombre" autocomplete="off">
+            
+                <label class="label-input" for="mail">Mail (Pflichfeld)*</label>
+                <input class="input-field mail" type="mail" id="mail" required name="Mail" autocomplete="off">
+            
+                <label class="label-input" for="number">Telefonnummer</label>
+                <input class="input-field phone" type="text" id="number" required name="Telefonnummer" autocomplete="off">
+    
+                <label class="label-input" for="massage">Nachricht</label>
+                <textarea class="text-area-field" type="text" id="massage" name="Mensaje" placeholder="Nachricht hier eingeben"
+                ></textarea>
+                <button>Senden</button>
+               
+                </form>
+            </div>
+        
+        </div>
+       
+        </div>
     </div>
 
 </template>
@@ -35,11 +82,7 @@
   position: absolute;
  
 }
-.title{
-  display: flex;
-  justify-content: center;
-  
-}
+
 .line{
     position: relative;
     width: 100%;
@@ -49,6 +92,129 @@
     margin-bottom: 15px;
  
     
+}
+.kontakt{
+  padding-top: 10px;
+}
+.subtitle{
+  display: flex;
+  justify-content: center;
+  margin-left: 35%;
+  padding-top: 20px;
+
+ 
+  
+}
+.text-subtitle{
+  display: flex;
+  justify-content: center;
+  margin-left: 35%;
+}
+.info-kontakt{
+
+  width: 50%;
+
+}
+
+.formular{
+  width: 50%;
+}
+.formular-info-contaier{
+  display: flex;
+  width: 100%;
+}
+.container-input{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    align-items: center;
+    width: 50%;
+}
+.input-field{
+    justify-content: center;
+    display:flex;
+    text-align: left;
+    box-sizing: border-box;
+    width: 120%;
+    padding: 8px;
+    margin: auto;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    background-size: 30px;
+    background-position: left;
+    background-position-x: 3px;
+  
+}
+.title{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+    
+    
+    
+}
+.label-input{
+    justify-content: center;
+    display: flex;
+    margin: 20px;
+    
+}
+.text-area-field{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    resize: none;
+    width: 120%;
+    height: 300px;
+    padding: 8px;
+    border: 1px solid $black;
+    box-sizing: content-box;
+}
+.p{
+
+  text-align: center;
+  padding-bottom: 5px;
+ 
+}
+@media only screen and (width <= 950px ) {
+  .formular-info-contaier{
+    display: block;
+  }
+  .info-kontakt{
+  width: 100%;
+  .subtitle, .text-subtitle{
+    margin-left: 0%;
+    padding: 0px;
+  }
+}
+.formular{
+  width: 100%;
+  .container-input{
+    margin: auto;
+    width: 75%;
+  }
+  .input-field,.text-area-field{
+    width: 100%;
+  }
+ 
+}
+.p{
+  width: 100%;
+}
+
+}
+@media only screen and (width >= 1200px){
+  .map-container{
+    width: 70%;
+    margin: auto;
+  }
+  .input-field{
+    width: 100%;
+  }
+
 }
 
 </style>

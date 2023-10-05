@@ -19,14 +19,13 @@ const emit = defineEmits(['customChange'])
         <div class="side-menu-body">
             <a href="#home" class="items home" @click="($emit('customChange'))">Home</a>
             <div class="line"></div>
-            <a href="#leistung" class="items leistung" @click="($emit('customChange'))">Leistug</a>
+            <a href="#leistung" class="items leistung" @click="($emit('customChange'))">Leistung</a>
             <div class="line"></div>
             <a href="#preise" class="items preise" @click="($emit('customChange'))">Preise</a>
             <div class="line"></div>
             <a href="#kontakt" class="items kontakt" @click="($emit('customChange'))">Kontakt</a>
             <div class="line"></div>
             <div class="footer-sidemenu">
-      
             </div>
         </div>
         </div>
@@ -114,7 +113,7 @@ const emit = defineEmits(['customChange'])
     display: flex;
     justify-content: center;
     text-decoration: none;
-    font-size: 27px;
+    font-size: 25px;
     margin: 30px;
     color: $black;
     vertical-align: center; 
