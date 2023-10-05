@@ -16,7 +16,12 @@ const emit = defineEmits(['customChange'])
 
         </div>
         <div class="divider"></div>
-        <div class="side-menu-body"></div>
+        <div class="side-menu-body">
+            <a href="#home" class="items home">Home</a>
+            <a href="#leistung" class="items leistung">Leistug</a>
+            <a href="#preise" class="items preise">Preise</a>
+            <a href="#kontakt" class="items kontakt">Kontakt</a>
+        </div>
         </div>
             
       

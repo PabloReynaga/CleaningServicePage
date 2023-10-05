@@ -18,9 +18,5 @@ let slides = [ '/src/components/img/photo1.png',
 
 </template>
 <style scoped lang="scss">
-.container{
-   
-        
-        
-}
+
 </style>

@@ -19,22 +19,23 @@ const emit = defineEmits(['switch'])
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
-    
-    bottom: 20px;
+    bottom: 25px;
     background-color: transparent;
-    width: 60px;
-    height: 40px;
+    width: auto;
+    height: auto;
    
 
 }
 .carousel-indicator-item{
-    width: 30%;
-    height: 45%;
+    width: 30px;
+    height: 4px;
     border: none;
     background-color: $grey;
-    margin: 4px;
+    margin: 5px;
     opacity: .5;
     cursor: pointer;
+    
+    
 
    
 }
