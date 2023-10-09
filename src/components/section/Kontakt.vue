@@ -15,7 +15,7 @@
         </iframe>
         </div>
         <h1 class="title kontakt">Kontakt</h1>
-        <p class="title">So können Sie mit Uns Kontakt aufnehmen.</p>
+        <p class="p">So können Sie mit Uns Kontakt aufnehmen.</p>
 
         <div class="formular-info-contaier">
           <div class="info-kontakt">
@@ -53,14 +53,19 @@
                 <label class="label-input" for="massage">Nachricht</label>
                 <textarea class="text-area-field" type="text" id="massage" name="Mensaje" placeholder="Nachricht hier eingeben"
                 ></textarea>
-                <button>Senden</button>
-               
+                <div class="button-container">
+                  <button class="button">Senden</button>
+                 
+                </div>
+                
                 </form>
             </div>
         
         </div>
+        
        
         </div>
+      
     </div>
 
 </template>
@@ -95,6 +100,7 @@
 }
 .kontakt{
   padding-top: 10px;
+  
 }
 .subtitle{
   display: flex;
@@ -168,15 +174,17 @@
     margin: auto;
     resize: none;
     width: 120%;
-    height: 300px;
+    height: 200px;
     padding: 8px;
     border: 1px solid $black;
     box-sizing: content-box;
+   
 }
-.p{
+.p, title{
 
   text-align: center;
   padding-bottom: 5px;
+  
  
 }
 @media only screen and (width <= 950px ) {
@@ -196,7 +204,11 @@
     margin: auto;
     width: 75%;
   }
-  .input-field,.text-area-field{
+  .text-area-field{
+    width: 90%;
+   
+  }
+  .input-field{
     width: 100%;
   }
  
@@ -205,16 +217,56 @@
   width: 100%;
 }
 
+
 }
 @media only screen and (width >= 1200px){
   .map-container{
     width: 70%;
     margin: auto;
+    
   }
   .input-field{
     width: 100%;
   }
 
+
 }
 
+.button{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-top: auto;
+  height: 45px;
+  width: 250px;
+  padding-top: 10px;
+  text-decoration: none;
+  color: $black;
+  border-radius: 1px;
+  border: none;
+  background-color: $grey;
+  cursor: pointer;
+  font-size: 20px;
+}
+.button:hover{
+  color: $white;
+  background-color: rgb(55, 55, 55);
+}
+@media only screen and (width >= 950px) {
+  .text-area-field{
+    margin-bottom: 100px;
+  }
+  .button-container{
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-top: -95px;
+ 
+  
+ 
+}
+  
+}
 </style>

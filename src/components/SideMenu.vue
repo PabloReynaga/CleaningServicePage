@@ -113,7 +113,7 @@ const emit = defineEmits(['customChange'])
     display: flex;
     justify-content: center;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     margin: 30px;
     color: $black;
     vertical-align: center; 

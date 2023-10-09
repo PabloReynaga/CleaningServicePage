@@ -1,13 +1,7 @@
 <script setup>
 import {useWindowScroll} from '@vueuse/core'
-import { computed, onMounted, onUpdated, ref } from 'vue';
+
 const { x , y} = useWindowScroll();
-
-
-
-
-
-
 
 </script>
 

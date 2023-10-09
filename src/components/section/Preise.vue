@@ -4,7 +4,7 @@
 <template>
     <div class="main-container">
         <div class="title">
-            <h1>Preise</h1>
+            <h1 v-motion-slide-visible-once-right>Preise</h1>
         </div>
         <div class="secondary-container">
         <div class="block-container">
@@ -107,6 +107,7 @@
 }
 .text-container-angebot {
     display: block;
+   
     
    
     
