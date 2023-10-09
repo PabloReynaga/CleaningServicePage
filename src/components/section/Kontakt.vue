@@ -13,9 +13,8 @@
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-        </div>
-        <h1 class="title kontakt">Kontakt</h1>
-        <p class="p">So können Sie mit Uns Kontakt aufnehmen.</p>
+      </div>
+        <p class="p">So können Sie mit uns Kontakt aufnehmen.</p>
 
         <div class="formular-info-contaier">
           <div class="info-kontakt">
@@ -35,7 +34,7 @@
             
             <div class="container-input">
                 <div class="header-titulos">
-                    <h1 class="title">Formular</h1>
+                    
                     <p class="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
                 
@@ -177,7 +176,7 @@
     height: 200px;
     padding: 8px;
     border: 1px solid $black;
-    box-sizing: content-box;
+    box-sizing: border-box;
    
 }
 .p, title{
@@ -205,11 +204,12 @@
     width: 75%;
   }
   .text-area-field{
-    width: 90%;
+    width: 100%;
    
   }
   .input-field{
     width: 100%;
+    
   }
  
 }
@@ -226,8 +226,9 @@
     
   }
   .input-field{
-    width: 100%;
+    width: 120%;
   }
+  
 
 
 }

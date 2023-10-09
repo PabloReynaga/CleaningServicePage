@@ -20,20 +20,20 @@
 <style lang="scss" scoped>
 .main-container{
     display: flex;
-    background-color: rgb(55, 55, 55);
+    background-color: $grey;
     height: 30vh;
    
 }
 .links{
     display: flex;
     text-decoration: none;
-    color: $white;
+    color: $black;
     padding: 15px;
     margin: 15px;
 
 }
 .separate-line{
-    border: 1px solid $grey;
+    border: 1px solid $white;
     height: 100%;
 }
 .text-container{
@@ -44,9 +44,9 @@
     width: 100%;
     margin-bottom: 0px;
    justify-content: center;
-    color: $white;
+    color: $black;
     font-size: 14px;
-    background-color:  rgb(39, 39, 39);
+    
 
 }
 .text{

@@ -47,6 +47,7 @@ useMotion(effect,{
     justify-content: center;
     display: flex;
     padding-top: 25px ;
+    
 }
 .text{
     display: flex;
@@ -57,7 +58,11 @@ useMotion(effect,{
     text-align: center;
     
 }
-
+@media only screen and (width <= 400px ){
+    .title{
+        
+    }
+}
 
 
 </style>
