@@ -20,10 +20,10 @@ function changeValue(){
         </div>
         
         <div class="nav-items-container">
-            <a href="#home" class="items activo">Home</a>
-            <a href="#leistung" class="items">Leistung</a>
-            <a href="#preise" class="items">Preise</a>
-            <a href="#kontakt" class="items">Kontakt</a>
+            <a href="/#home" class="items activo">Home</a>
+            <a href="/#leistung" class="items">Leistung</a>
+            <a href="/#preise" class="items">Preise</a>
+            <a href="/#kontakt" class="items">Kontakt</a>
         </div>
 
         <button class="dropdown-menu-button" @click="openSideMenu=!openSideMenu" >
@@ -41,7 +41,6 @@ function changeValue(){
                 <button class="button-transparent-block" @click="changeValue()"></button>
             </div>
         </div> 
-        
     </Transition> 
  
     

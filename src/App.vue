@@ -1,32 +1,20 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
 import "../src/assets/main.scss"
-import Home from '././components/section/Home.vue';
-import Leistung from './components/section/Leistung.vue';
-import Preise from './components/section/Preise.vue'
-import Kontakt from './components/section/Kontakt.vue';
-import FooterBar from './components/FooterBar.vue';
+import Page from './components/page/Page.vue'
+import Impressum from './components/page/impressum.vue';
+import { computed, ref } from 'vue';
+
+
+
 </script>
 
 <template>
   <header>
        <NavBar/>
   </header>
-  <body>
-    <section id="home">
-        <Home/>
-    </section>
-    <section id="leistung">
-        <Leistung/>
-    </section>
-    <section id="preise">
-      <Preise/>
-    </section>
-    <section id="kontakt">
-      <Kontakt/>
-    </section>
-  </body>
-  <footer>
-    <FooterBar/>
-  </footer>
+  
+  <router-view/>
+
+
 </template>
