@@ -1,39 +1,51 @@
 <script setup>
-import { ref } from 'vue';
+
 import PhotosPres from '../PhotosPres.vue';
-import {useMotion} from '@vueuse/motion'
+import { gsap } from "gsap";    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { onMounted, ref } from 'vue';
 
-const effect = ref();
 
-useMotion(effect,{
-    initial:{
-        opacity:0,
-        y:100,
-        transition: 2,
-        delay: "200"
+const textoRight = ref(null);
+const textoLeft = ref(null);
 
-    },visibleOnce:{
-        opacity: 1,
-        y:0,
-        
-    }
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(()=>{
+    gsap.from(textoLeft.value,{
+        scrollTrigger:{
+          trigger: textoLeft.value,
+          toggleActions:"restart none none none",
+        },
+        delay: 0.1,
+        duration: 2,
+        x:500
+    }), 
+    gsap.from(textoRight.value,{
+        scrollTrigger:{
+          trigger: textoRight.value,
+          toggleActions:"restart none none none"
+        },
+        delay: 0.1,
+        duration: 2,
+        x:-500
+    })
 })
 
 </script>
 <template>
 
-<div class="main-container">
-    <div class="container" ref="effect">
+<div class="main-container" >
+    <div class="container" ref="textoRight" >
         <h1 class="title">Über uns</h1>
         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos neque ad assumenda mollitia ea eaque laboriosam amet dignissimos, quibusdam aliquam consequatur sapiente dolorem culpa, vero, ipsum eveniet dicta veritatis eum!0</p>
     </div>
-    <div class="container" ref="effect">
+    <div class="container" ref="textoLeft" >
         <h1 class="title">Leistung</h1>
         <p class="text botton">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos neque ad assumenda mollitia ea eaque laboriosam amet dignissimos, quibusdam aliquam consequatur sapiente dolorem culpa, vero, ipsum eveniet dicta veritatis eum!0</p>
     </div>
     <div class="photos-container">
         <PhotosPres></PhotosPres>
-        
     </div>
 </div>
 
@@ -47,6 +59,7 @@ useMotion(effect,{
     justify-content: center;
     display: flex;
     padding-top: 25px ;
+    
     
 }
 .text{
