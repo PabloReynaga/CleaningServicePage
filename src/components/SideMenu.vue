@@ -17,13 +17,13 @@ const emit = defineEmits(['customChange'])
         </div>
         <div class="divider"></div>
         <div class="side-menu-body">
-            <a href="#home" class="items home" @click="($emit('customChange'))">Home</a>
+            <a href="/#home" class="items home" @click="($emit('customChange'))">Home</a>
             <div class="line"></div>
-            <a href="#leistung" class="items leistung" @click="($emit('customChange'))">Leistung</a>
+            <a href="/#leistung" class="items leistung" @click="($emit('customChange'))">Leistung</a>
             <div class="line"></div>
-            <a href="#preise" class="items preise" @click="($emit('customChange'))">Preise</a>
+            <a href="/#preise" class="items preise" @click="($emit('customChange'))">Preise</a>
             <div class="line"></div>
-            <a href="#kontakt" class="items kontakt" @click="($emit('customChange'))">Kontakt</a>
+            <a href="/#kontakt" class="items kontakt" @click="($emit('customChange'))">Kontakt</a>
             <div class="line"></div>
             <div class="footer-sidemenu">
             </div>

@@ -19,7 +19,7 @@ onMounted(()=>{
         },
         delay: 0.1,
         duration: 2,
-        x:500
+        x:300
     }), 
     gsap.from(textoRight.value,{
         scrollTrigger:{
@@ -28,7 +28,7 @@ onMounted(()=>{
         },
         delay: 0.1,
         duration: 2,
-        x:-500
+        x:-300
     })
 })
 

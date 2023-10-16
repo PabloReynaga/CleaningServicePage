@@ -4,10 +4,14 @@ import { onBeforeUnmount, onMounted, ref } from 'vue';
 import CarouselItem from './CarouselItem.vue';
 import CarouselControls from './CarouselControls.vue';
 import CarouselIndicator from './CarouselIndicator.vue'
+import { gsap } from "gsap";    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const currentSlide = ref(0);
 const slideInterval = ref(0);
 const direction = ref("right");
+const title = ref(null);
+const subtitle = ref(null);
 
 const props = defineProps({
     slides: {
@@ -65,6 +69,20 @@ function switchSlide(index){
     }
 }
 
+gsap.registerPlugin(ScrollTrigger);
+onMounted(()=>{
+    gsap.from(title.value,{
+        delay:0.2,
+       
+        y:-50
+    })
+    gsap.from(subtitle.value,{
+        delay: 0.2,
+        y:50
+    })
+    
+})
+
 </script>
 
 <template>
@@ -90,7 +108,10 @@ function switchSlide(index){
             </CarouselIndicator>
         </div>
         <div class="title-container">
-            <h1 class="title-home">Schön Sauber</h1>
+            <h1 class="title-home" ref="title">Schön Sauber</h1>
+            <p class="subtitle" ref="subtitle">
+                Lorem ipsum, dolor sit amet consectetur adipi
+            </p>
         </div>
     </div>
 </template>
@@ -105,11 +126,17 @@ function switchSlide(index){
     right: 0;
     color: $white;
     font-size: 40px;
-    top:150px;
+    top:140px;
+    background-color: $black;
+    padding-left: 10px;
+    padding-right: 10px ;
+    width: 300px;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.400);
 }
 .title-container{
    
-    width: 100%;
+    width: auto;
 
 }
 .carousel{
@@ -126,5 +153,31 @@ function switchSlide(index){
     
     
 
+}
+.subtitle{
+    position:absolute;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: $white;
+    font-size: 25px;
+    background: rgba(0, 0, 0, 0.400);
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px ;
+    top:180px;
+    width: 300px;
+    border-radius: 2px;
+  
+    
+
+}
+@media only screen and ( width >= 600px){
+    .subtitle{
+        width: 550px;
+    }
 }
 </style>
