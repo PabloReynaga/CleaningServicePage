@@ -37,6 +37,7 @@ import { RouterLink } from 'vue-router';
     color: $black;
     padding: 15px;
     margin: 15px;
+    
         
 }
 .links:hover{
@@ -44,6 +45,7 @@ import { RouterLink } from 'vue-router';
 }
 .links-container{
     display: flex;
+    
 }
 
 .text-container{
@@ -56,10 +58,15 @@ import { RouterLink } from 'vue-router';
     justify-content: center;
     color: $black;
     font-size: 14px;
+   
     
 }
 .text{
     font-size: 14px;
+    margin-right: 50px;
+    margin-left: 40px;
+    text-align: center;
+    
 }
 @media only screen and (width > 1000px){
    
@@ -67,5 +74,8 @@ import { RouterLink } from 'vue-router';
     width: 30%;
   }
 }
-
+@media only screen and (width < 500px) {
+    .links{padding: 5px;}
+    
+}
 </style>

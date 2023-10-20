@@ -9,6 +9,7 @@ const item1 = ref(null);
 const item2 = ref(null);
 const item3 = ref(null);
 const item4 = ref(null);
+const item = ref(null);
 
 function changeValue(){
      openSideMenu.value = !openSideMenu
@@ -37,6 +38,10 @@ onMounted(()=>{
         delay:0.1,
         x:-1500,duration:1
     })
+    gsap.from(item.value,{
+      x:200,
+      duration:.5
+    })
 })
 
 </script>
@@ -56,7 +61,7 @@ onMounted(()=>{
             <a ref="item4" href="/#kontakt" class="items">Kontakt</a>
         </div>
 
-        <button class="dropdown-menu-button" @click="openSideMenu=!openSideMenu" >
+        <button class="dropdown-menu-button" @click="openSideMenu=!openSideMenu" ref="item">
             
             <svg xmlns="http://www.w3.org/2000/svg" opacity="0.7"  viewBox="0 0 50 50" width="30px" height="32px">
                 <path d="M 3 9 A 1.0001 1.0001 0 1 0 3 11 L 47 11 A 1.0001 1.0001 0 1 0 47 9 L 3 9 z M 3 24 A 1.0001 1.0001 0 1 0 3 26 L 47 26 A 1.0001 1.0001 0 1 0 47 24 L 3 24 z M 3 39 A 1.0001 1.0001 0 1 0 3 41 L 47 41 A 1.0001 1.0001 0 1 0 47 39 L 3 39 z"/>

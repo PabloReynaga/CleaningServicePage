@@ -113,6 +113,7 @@ onMounted(()=>{
             <p class="subtitle" ref="subtitle">
                 Lorem ipsum, dolor sit amet consectetur adipi
             </p>
+            <button class="button" ref="button">Kontaktieren Sie uns!</button>
         </div>
     </div>
 </template>
@@ -175,6 +176,29 @@ onMounted(()=>{
   
     
 
+}
+.button{
+  position: absolute;
+ left: calc(50% - 125px);
+ 
+ right: 0;
+ top:500px;
+ bottom: 0; 
+  
+  height: 45px;
+  width: 250px;
+  
+  text-decoration: none;
+  color: $black;
+  border-radius: 1px;
+  border: none;
+  background-color: $grey;
+  cursor: pointer;
+  font-size: 20px;
+}
+.button:hover{
+  color: $white;
+  background-color: rgb(55, 55, 55);
 }
 @media only screen and ( width >= 600px){
     .subtitle{

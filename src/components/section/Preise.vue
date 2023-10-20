@@ -23,8 +23,85 @@ onMounted(()=>{
             toggleActions: "restart none none none",
 
         },
+        x:-400,
+        duration: 1.5
+    }),
+    gsap.from(text1_subtitle.value,{
+        scrollTrigger:{
+            trigger: text1_subtitle.value,
+            toggleActions: "restart none none none",
+
+        },
+        x:200,
+        duration: 1.5
+    }),
+    gsap.from(text3.value,{
+        scrollTrigger:{
+            trigger: text3.value,
+            toggleActions: "restart none none none",
+
+        },
+        x:-400,
+        duration: 1.5,
+        delay:.3
+    }),
+    gsap.from(text3_subtitle.value,{
+        scrollTrigger:{
+            trigger: text3_subtitle.value,
+            toggleActions: "restart none none none",
+
+        },
+        x:70,
+        duration: 1.5,
+        delay:.3
+    }),
+    gsap.from(text2.value,{
+        scrollTrigger:{
+            trigger: text2.value,
+            toggleActions: "restart none none none",
+
+        },
+        x:400,
+        duration: 1.5
+    }),
+    gsap.from(text2_subtitle.value,{
+        scrollTrigger:{
+            trigger: text2_subtitle.value,
+            toggleActions: "restart none none none",
+
+        },
         x:-200,
         duration: 1.5
+    }),
+    gsap.from(text4.value,{
+        scrollTrigger:{
+            trigger: text4.value,
+            toggleActions: "restart none none none",
+
+        },
+        x:400,
+        duration: 1.5,
+        delay:.3
+    }),
+    gsap.from(text4_subtitle.value,{
+        scrollTrigger:{
+            trigger: text4_subtitle.value,
+            toggleActions: "restart none none none",
+
+        },
+        x:-70,
+        duration: 1.5,
+        delay:.3
+    }),
+    gsap.from(imagen.value,{
+        scrollTrigger:{
+            trigger: imagen.value,
+            toggleActions: "restart none none none",
+
+        },
+        duration: 1.5,
+         autoAlpha: 0,
+         ease: "Power2.in"
     })
 })
 
@@ -44,7 +121,7 @@ onMounted(()=>{
             </div>
         </div>
         <div class="img-container">
-            <img src="./../img/deal2.png" alt="" class="img">
+            <img ref="imagen" src="./../img/deal2.png" alt="" class="img">
         </div>
         <div class="block-container">
             <div class="text-container-zeit">
