@@ -1,59 +1,170 @@
 <script setup>
-import {useWindowScroll} from '@vueuse/core'
+import { onMounted, ref } from 'vue';
+import { gsap } from "gsap";    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const { x , y} = useWindowScroll();
+
+const item1 = ref(null);
+const item2 = ref(null);
+const item3 = ref(null);
+const item4 = ref(null);
+const item5 = ref(null);
+const item6 = ref(null);
+const item7 = ref(null);
+const item8 = ref(null);
+const item9 = ref(null);
+const img = ref(null);
+const title = ref(null);
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(()=>{
+    gsap.from(item1.value,{
+        scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        x:-800,
+        duration:1,
+        delay:.3
+        
+    }),
+    gsap.from(item2.value,{
+        scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        x:-800,
+        duration:1,
+        delay:.5
+    }),
+    gsap.from(item3.value,{
+          scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        x:-800,
+        duration:1,
+        delay:.7
+    }),
+    gsap.from(item4.value,{
+          scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        x:-800,
+        duration:1,
+        delay:.9
+    }),
+    gsap.from(item5.value,{
+          scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        x:-800,
+        duration:1,
+        delay:1.1
+    }),
+    gsap.from(item6.value,{
+        scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        x:-800,
+        duration:1,
+        delay:1.3
+    }),
+    gsap.from(item7.value,{
+        scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        x:-800,
+        duration:1,
+        delay:1.5
+    }),
+    gsap.from(item8.value,{
+          scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        x:-800,
+        duration:1,
+        delay:1.7
+    }),
+    gsap.from(item9.value,{
+          scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        x:-800,
+        duration:1,
+        delay:1.9
+    }),
+    gsap.from(title.value,{
+        scrollTrigger:{
+          trigger: item1.value,
+          toggleActions:"restart none none none",
+        },
+        y:-60,
+        duration:1,
+        delay:.5
+       
+    })
+
+})
 
 </script>
 
 <template>
     <div class="container-img">
-        <img src="./img/layout.png" alt="" class="img">
-        <h1 class="title">Unsere Services</h1>
+        <img ref="img" src="./img/layout.png" alt="" class="img">
+        <h1 ref="title" class="title">Unsere Services</h1>
         <div class="divider"></div>
         <div class="items-main-container">
             <div class="items-inner-container">
                
-                <div class="item">
+                <div ref="item1" class="item">
                     <p class="text">
                     Büroreinigung
                     </p>
                 </div>
-                <div class="item">
+                <div ref="item2" class="item">
                     <p class="text">
                         Glasreinigung
                     </p>
                 </div>
-                <div class="item">
+                <div ref="item3" class="item">
                     <p class="text">
                         Küchen
                     </p>
                 </div>
-                <div class="item">
+                <div ref="item4" class="item">
                     <p class="text">
                          Toiletten
                     </p>
                 </div>
-                <div class="item">
+                <div ref="item5" class="item">
                     <p class="text">
                         Bars
                     </p>
                 </div>
-                <div class="item">
+                <div ref="item6" class="item">
                     <p class="text">
                         Konferenzräume
                     </p>
                 </div>
-                <div class="item">
+                <div ref="item7" class="item">
                     <p class="text">
                         Praxisreinigung
                     </p>
                 </div>
-                <div class="item">
+                <div ref="item8" class="item">
                     <p class="text">
                         Lagerhallen
                     </p>
                 </div>
-                <div class="item">
+                <div ref="item9" class="item">
                     <p class="text">
                         Schulen
                     </p>
@@ -78,7 +189,7 @@ const { x , y} = useWindowScroll();
     height: 100%;
     object-fit:cover;
     object-position:0%;
-    animation-name: smoothMoves;
+animation-name: smoothMoves;
     animation-duration: 3s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
@@ -124,10 +235,7 @@ const { x , y} = useWindowScroll();
     text-align: center;
     margin-top: -10px;
     font-size: 20px;
-    animation-name: smoothMoves;
-    animation-duration: 3s;
-    transition: 3s;
-    animation-iteration-count: infinite;
+   
   
 }
 .div-empty{

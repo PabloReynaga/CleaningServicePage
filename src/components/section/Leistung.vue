@@ -17,8 +17,7 @@ onMounted(()=>{
           trigger: textoLeft.value,
           toggleActions:"restart none none none",
         },
-        delay: 0.1,
-        duration: 2,
+        duration: 1,
         x:300
     }), 
     gsap.from(textoRight.value,{
@@ -26,8 +25,8 @@ onMounted(()=>{
           trigger: textoRight.value,
           toggleActions:"restart none none none"
         },
-        delay: 0.1,
-        duration: 2,
+       
+        duration: 1,
         x:-300
     })
 })
@@ -51,10 +50,6 @@ onMounted(()=>{
 
 </template>
 <style lang="scss" scoped>
-
-.main-container{
-    
-}
 .title{
     justify-content: center;
     display: flex;
@@ -71,11 +66,17 @@ onMounted(()=>{
     text-align: center;
     
 }
-@media only screen and (width <= 400px ){
-    .title{
-        
+@media only screen and (width >= 1000px) { 
+    
+    .container{
+        display: block;
+        width: 700px;
+        justify-content: center;
+        margin: auto;
     }
+    
 }
+
 
 
 </style>

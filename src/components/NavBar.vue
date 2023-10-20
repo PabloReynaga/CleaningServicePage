@@ -1,13 +1,43 @@
 <script setup>
 import SideBar from './SideMenu.vue'
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import { gsap } from "gsap";    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const openSideMenu = ref(false);
-
+const item1 = ref(null);
+const item2 = ref(null);
+const item3 = ref(null);
+const item4 = ref(null);
 
 function changeValue(){
      openSideMenu.value = !openSideMenu
 }
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(()=>{
+    gsap.from(item1.value,{
+        delay:0.4,
+        x:-1500,
+        duration:1
+        
+    }),
+    gsap.from(item2.value,{
+        delay:0.3,
+        x:-1500,
+        duration:1
+    }),
+    gsap.from(item3.value,{
+        x:-1500,
+        delay:0.2,
+        duration:1
+    }),
+    gsap.from(item4.value,{
+        delay:0.1,
+        x:-1500,duration:1
+    })
+})
 
 </script>
 
@@ -20,10 +50,10 @@ function changeValue(){
         </div>
         
         <div class="nav-items-container">
-            <a href="/#home" class="items activo">Home</a>
-            <a href="/#leistung" class="items">Leistung</a>
-            <a href="/#preise" class="items">Preise</a>
-            <a href="/#kontakt" class="items">Kontakt</a>
+            <a ref="item1" href="/#home" class="items activo">Home</a>
+            <a ref="item2" href="/#leistung" class="items">Leistung</a>
+            <a ref="item3" href="/#preise" class="items">Preise</a>
+            <a ref="item4" href="/#kontakt" class="items">Kontakt</a>
         </div>
 
         <button class="dropdown-menu-button" @click="openSideMenu=!openSideMenu" >
@@ -90,13 +120,17 @@ function changeValue(){
 
     }
     .items{
+        display: inline-block;
         text-decoration: none;
         margin-left: 20px;
         font-size: 22px;
         color: $grey;
     }
     .items:hover{
+        
+       
         color: $black;
+        
     }
     
     @media only screen and (min-width:650px){

@@ -1,28 +1,55 @@
 <script setup>
+import { ref, onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+const text1 = ref(null);
+const text1_subtitle = ref(null);
+const text2 = ref(null);
+const text2_subtitle = ref(null);
+const text3 = ref(null);
+const text3_subtitle = ref(null);
+const text4 = ref(null);
+const text4_subtitle = ref(null);
+const title = ref(null);
+const imagen = ref(null);
+
+gsap.registerPlugin(ScrollTrigger)
+
+onMounted(()=>{
+    gsap.from(text1.value,{
+        scrollTrigger:{
+            trigger: text1.value,
+            toggleActions: "restart none none none",
+
+        },
+        x:-200,
+        duration: 1.5
+    })
+})
+
+
 
 </script>
 <template>
     <div class="main-container">
         <div class="title">
-            <h1 v-motion-slide-visible-once-right>Preise</h1>
+            <h1 ref="title">Preise</h1>
         </div>
         <div class="secondary-container">
         <div class="block-container">
             <div class="text-container-preis">
-                <h3 class="title-text">Faire Preise</h3>
-                <p class="text preis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
+                <h3 class="title-text" ref="text1_subtitle">Faire Preise</h3>
+                <p class="text preis" ref="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
             </div>
-           
-            
         </div>
         <div class="img-container">
             <img src="./../img/deal2.png" alt="" class="img">
         </div>
         <div class="block-container">
             <div class="text-container-zeit">
-                <h3 class="title-text">Zeitintervalle</h3>
-                <p class="text zeit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
-                
+                <h3 class="title-text" ref="text2_subtitle">Zeitintervalle</h3>
+                <p class="text zeit" ref="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
             </div>
            
         </div>
@@ -30,13 +57,13 @@
         </div>
         <div class="third-container">
             <div class="text-container-gz">
-                <h3 class="title-text">Geräte und Zubehör</h3>
-                <p class="text gz">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
+                <h3 class="title-text" ref="text3_subtitle">Geräte und Zubehör</h3>
+                <p class="text gz" ref="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
                 
         </div>
         <div class="text-container-angebot">
-                <h3 class="title-text">Ihr persönliches Angebot</h3>
-                <p class="text angebot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
+                <h3 class="title-text" ref="text4_subtitle">Ihr persönliches Angebot</h3>
+                <p class="text angebot" ref="text4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
             </div>
 
         </div>

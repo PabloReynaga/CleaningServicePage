@@ -73,12 +73,13 @@ gsap.registerPlugin(ScrollTrigger);
 onMounted(()=>{
     gsap.from(title.value,{
         delay:0.2,
-       
-        y:-50
+        y:-70,
+        duration:1
     })
     gsap.from(subtitle.value,{
         delay: 0.2,
-        y:50
+        y:70,
+        duration:1
     })
     
 })

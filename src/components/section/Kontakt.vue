@@ -1,4 +1,26 @@
 <script setup>
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { onMounted, ref } from 'vue';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const subtitle_telefon = ref(null);
+const subtitle_adresse = ref(null);
+const subtitle_mail = ref(null);
+
+
+onMounted(()=>{
+  gsap.from([subtitle_adresse.value,subtitle_mail.value,subtitle_telefon.value],{
+    scrollTrigger:{
+      trigger: subtitle_telefon.value,
+      toggleActions:"restart none none none "
+      
+    },
+    duration: 1.5,
+    y: -35    
+  })
+})
 </script>
 <template>
     <div class="main-container">
@@ -18,13 +40,13 @@
 
         <div class="formular-info-contaier">
           <div class="info-kontakt">
-            <h3 class="subtitle">Telefon</h3>
+            <h3 class="subtitle" ref="subtitle_telefon">Telefon</h3>
             <p class="text-subtitle">17661297136 / 040 49205376</p>
-            <h3 class="subtitle">Email</h3>
+            <h3 class="subtitle" ref="subtitle_mail">Email</h3>
             <p class="text-subtitle">
             info@multicleancompany.com
             </p>
-            <h3 class="subtitle">Adresse</h3>
+            <h3 class="subtitle" ref="subtitle_adresse">Adresse</h3>
             <p class="text-subtitle">
             Bethovenstraße
             22083 Hamburg</p>
