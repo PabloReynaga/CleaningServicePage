@@ -19,15 +19,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 onMounted(()=>{
    
-        tl.from(item1.value,{x:500}),
+        tl.from(item1.value,{x:200},.1),
         tl.from(item2.value,{x:200},"-=50%"),
         tl.from(item3.value,{x:200},"-=50%")
         tl.from(item4.value,{x:200},"-=50%")
    
 })
-
-
-
 
 
 </script>

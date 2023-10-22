@@ -125,7 +125,7 @@ onMounted(()=>{
     position:absolute;
     margin-right: auto;
     margin-left: auto;
-    text-align: right;
+    text-align: center;
     left: 0;
     right: 0;
     color: $white;
@@ -146,6 +146,7 @@ onMounted(()=>{
 .carousel{
     display: block;
     justify-content: center;
+    
    
 }
 

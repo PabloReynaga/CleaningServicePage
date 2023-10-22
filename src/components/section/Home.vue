@@ -1,7 +1,7 @@
 <script setup>
 import Carousel from '../slider/Carousel.vue';
 import { gsap } from 'gsap'  
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { onMounted, ref } from 'vue';
 
 
