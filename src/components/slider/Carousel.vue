@@ -113,7 +113,9 @@ onMounted(()=>{
             <p class="subtitle" ref="subtitle">
                 Lorem ipsum, dolor sit amet consectetur adipi
             </p>
-            <button class="button" ref="button">Kontaktieren Sie uns!</button>
+            <a href="#kontakt" class="button" ref="button">
+                <p class="a-text"> Kontaktieren Sie uns!</p>
+        </a>
         </div>
     </div>
 </template>
@@ -123,7 +125,7 @@ onMounted(()=>{
     position:absolute;
     margin-right: auto;
     margin-left: auto;
-    text-align: center;
+    text-align: right;
     left: 0;
     right: 0;
     color: $white;
@@ -179,15 +181,12 @@ onMounted(()=>{
 }
 .button{
   position: absolute;
- left: calc(50% - 125px);
- 
- right: 0;
- top:500px;
- bottom: 0; 
-  
+  left: calc(50% - 125px);
+  right: 0;
+  top:calc(80%);
+  bottom: 0; 
   height: 45px;
   width: 250px;
-  
   text-decoration: none;
   color: $black;
   border-radius: 1px;
@@ -204,5 +203,9 @@ onMounted(()=>{
     .subtitle{
         width: 550px;
     }
+}
+.a-text{
+    text-align: center;
+    margin-top: 9px;
 }
 </style>

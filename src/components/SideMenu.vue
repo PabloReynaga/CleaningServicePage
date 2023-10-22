@@ -1,7 +1,34 @@
 <script setup>
 
+import { gsap } from "gsap";    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { guardReactiveProps, onMounted, onUpdated, ref } from 'vue';
+
+const item1 = ref(null);
+const item2 = ref(null);
+const item3 = ref(null);
+const item4 = ref(null);
+
 const props = defineProps(['closedSideBar'])
 const emit = defineEmits(['customChange'])
+const tl = gsap.timeline();
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+onMounted(()=>{
+   
+        tl.from(item1.value,{x:500}),
+        tl.from(item2.value,{x:200},"-=50%"),
+        tl.from(item3.value,{x:200},"-=50%")
+        tl.from(item4.value,{x:200},"-=50%")
+   
+})
+
+
+
+
 
 </script>
 
@@ -10,20 +37,20 @@ const emit = defineEmits(['customChange'])
        
         <div :class="[closedSideBar? 'side-menu-container' : 'close-side-menu-container' ]"  >
         <div class="side-menu-header">
-            <button class="dropdown-menu-button" @click="($emit('customChange'))">
+            <button class="dropdown-menu-button" @click="($emit('customChange'))" :click=tl.restart()>
                 <img class="x-img" src="../icon/x.png" alt="">
             </button>
 
         </div>
         <div class="divider"></div>
         <div class="side-menu-body">
-            <a href="/#home" class="items home" @click="($emit('customChange'))">Home</a>
+            <a href="/#home" class="items home" ref="item1" @click="($emit('customChange'))">Home</a>
             <div class="line"></div>
-            <a href="/#leistung" class="items leistung" @click="($emit('customChange'))">Leistung</a>
+            <a href="/#leistung" class="items leistung" ref="item2" @click="($emit('customChange'))">Leistung</a>
             <div class="line"></div>
-            <a href="/#preise" class="items preise" @click="($emit('customChange'))">Preise</a>
+            <a href="/#preise" class="items preise" ref="item3" @click="($emit('customChange'))">Preise</a>
             <div class="line"></div>
-            <a href="/#kontakt" class="items kontakt" @click="($emit('customChange'))">Kontakt</a>
+            <a href="/#kontakt" class="items kontakt" ref="item4" @click="($emit('customChange'))">Kontakt</a>
             <div class="line"></div>
             <div class="footer-sidemenu">
             </div>
