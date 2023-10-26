@@ -17,17 +17,16 @@ onMounted(()=>{
           trigger: textoLeft.value,
           toggleActions:"restart none none none",
         },
-        duration: 1,
-        x:300
+        duration: 2,
+        x:-200
     }), 
     gsap.from(textoRight.value,{
         scrollTrigger:{
           trigger: textoRight.value,
           toggleActions:"restart none none none"
         },
-       
         duration: 1,
-        x:-300
+        x:-150
     })
 })
 

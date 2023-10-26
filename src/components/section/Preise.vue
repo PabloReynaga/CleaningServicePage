@@ -23,7 +23,7 @@ onMounted(()=>{
             toggleActions: "restart none none none",
 
         },
-        x:-400,
+        x:50,
         duration: 1.5
     }),
     gsap.from(text1_subtitle.value,{
@@ -32,7 +32,7 @@ onMounted(()=>{
             toggleActions: "restart none none none",
 
         },
-        x:200,
+        x:-50,
         duration: 1.5
     }),
     gsap.from(text3.value,{
@@ -41,7 +41,7 @@ onMounted(()=>{
             toggleActions: "restart none none none",
 
         },
-        x:-400,
+        x: 50,
         duration: 1.5,
         delay:.3
     }),
@@ -51,7 +51,7 @@ onMounted(()=>{
             toggleActions: "restart none none none",
 
         },
-        x:70,
+        x:-50,
         duration: 1.5,
         delay:.3
     }),
@@ -61,7 +61,7 @@ onMounted(()=>{
             toggleActions: "restart none none none",
 
         },
-        x:400,
+        x:50,
         duration: 1.5
     }),
     gsap.from(text2_subtitle.value,{
@@ -70,7 +70,7 @@ onMounted(()=>{
             toggleActions: "restart none none none",
 
         },
-        x:-200,
+        x:-50,
         duration: 1.5
     }),
     gsap.from(text4.value,{
@@ -79,7 +79,7 @@ onMounted(()=>{
             toggleActions: "restart none none none",
 
         },
-        x:400,
+        x:50,
         duration: 1.5,
         delay:.3
     }),
@@ -89,7 +89,7 @@ onMounted(()=>{
             toggleActions: "restart none none none",
 
         },
-        x:-70,
+        x:-50,
         duration: 1.5,
         delay:.3
     }),
@@ -157,11 +157,8 @@ onMounted(()=>{
   align-items: center;
   margin: auto;
   margin-bottom: 0px;
- 
   
  
-  
-    
 }
 .title{
     display: flex;

@@ -3,13 +3,13 @@ import Carousel from '../slider/Carousel.vue';
 import { gsap } from 'gsap'  
 
 import { onMounted, ref } from 'vue';
+import Photo1 from './../img/photo1.png';
+import Photo2 from './../img/photo2.png';
+import Photo3 from './../img/photo3.png';
+import Photo4 from './../img/photo4.png';
 
 
-let slides = [ '/src/components/img/photo1.png',
-               '/src/components/img/photo2.png', 
-               '/src/components/img/photo3.png',
-               '/src/components/img/photo4.png' 
-]
+let slides = [ Photo1,Photo2,Photo3,Photo4]
 
 const animation = ref(null)
 

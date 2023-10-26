@@ -10,17 +10,6 @@ const subtitle_adresse = ref(null);
 const subtitle_mail = ref(null);
 
 
-onMounted(()=>{
-  gsap.from([subtitle_adresse.value,subtitle_mail.value,subtitle_telefon.value],{
-    scrollTrigger:{
-      trigger: subtitle_telefon.value,
-      toggleActions:"restart none none none "
-      
-    },
-    duration: 1.5,
-    y: -35    
-  })
-})
 </script>
 <template>
     <div class="main-container">

@@ -181,6 +181,7 @@ onMounted(()=>{
     display: flex;
     justify-content: center;
     height: 800px;
+    width: 100%;
     
 
 }
