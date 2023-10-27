@@ -14,17 +14,7 @@ const subtitle_mail = ref(null);
 <template>
     <div class="main-container">
       <div class="line"></div>
-        <h1 class="title">Wo finden Sie uns?</h1>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus" 
-            width="600" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
+        <h1 class="title">Kontaktieren Sie uns!</h1>
         <p class="p">So können Sie mit uns Kontakt aufnehmen.</p>
 
         <div class="formular-info-contaier">
@@ -45,11 +35,10 @@ const subtitle_mail = ref(null);
             
             <div class="container-input">
                 <div class="header-titulos">
-                    
                     <p class="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
                 
-                <form action="https://formsubmit.co/" method="post">
+                <form action="https://formsubmit.co/reynagafarias@gmail.com" method="post">
                     
                 <label class="label-input"  for="name">Name / Firma (Pflichfeld)*</label>
                 <input class="input-field name" type="text" id="name" required name="Nombre" autocomplete="off">
@@ -58,14 +47,13 @@ const subtitle_mail = ref(null);
                 <input class="input-field mail" type="mail" id="mail" required name="Mail" autocomplete="off">
             
                 <label class="label-input" for="number">Telefonnummer</label>
-                <input class="input-field phone" type="text" id="number" required name="Telefonnummer" autocomplete="off">
+                <input class="input-field phone" type="text" id="number" name="Telefonnummer" autocomplete="off">
     
                 <label class="label-input" for="massage">Nachricht</label>
                 <textarea class="text-area-field" type="text" id="massage" name="Mensaje" placeholder="Nachricht hier eingeben"
                 ></textarea>
                 <div class="button-container">
                   <button class="button">Senden</button>
-                 
                 </div>
                 
                 </form>
@@ -75,6 +63,17 @@ const subtitle_mail = ref(null);
         
        
         </div>
+        <h1 class="title">Wo finden Sie uns?</h1>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
       
     </div>
 
@@ -125,6 +124,7 @@ const subtitle_mail = ref(null);
   display: flex;
   justify-content: center;
   margin-left: 35%;
+  
 }
 .info-kontakt{
 
@@ -155,11 +155,9 @@ const subtitle_mail = ref(null);
     width: 120%;
     padding: 8px;
     margin: auto;
-    background-repeat: no-repeat;
-    padding-left: 40px;
-    background-size: 30px;
-    background-position: left;
-    background-position-x: 3px;
+    
+   
+    
   
 }
 .title{
@@ -178,7 +176,7 @@ const subtitle_mail = ref(null);
     
 }
 .text-area-field{
-    display: block;
+    
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -188,6 +186,8 @@ const subtitle_mail = ref(null);
     padding: 8px;
     border: 1px solid $black;
     box-sizing: border-box;
+    
+    
    
 }
 .p, title{
@@ -197,7 +197,7 @@ const subtitle_mail = ref(null);
   
  
 }
-@media only screen and (width <= 950px ) {
+@media only screen and (max-width : 950px ) {
   .formular-info-contaier{
     display: block;
   }
@@ -207,6 +207,7 @@ const subtitle_mail = ref(null);
     margin-left: 0%;
     padding: 0px;
   }
+  
 }
 .formular{
   width: 100%;

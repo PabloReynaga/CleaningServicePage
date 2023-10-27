@@ -190,7 +190,7 @@ onMounted(()=>{
     height: 100%;
     object-fit:cover;
     object-position:0%;
-animation-name: smoothMoves;
+    animation-name: smoothMoves;
     animation-duration: 3s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
