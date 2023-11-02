@@ -13,6 +13,7 @@ const text4 = ref(null);
 const text4_subtitle = ref(null);
 const title = ref(null);
 const imagen = ref(null);
+const text_quality = ref(null);
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -103,6 +104,16 @@ onMounted(()=>{
          autoAlpha: 0,
          ease: "Power2.in"
     })
+      gsap.from(text_quality.value,{
+        scrollTrigger:{
+            trigger: text_quality.value,
+            toggleActions: "restart none none none",
+
+        },
+        duration: 1.5,
+         autoAlpha: 0,
+         ease: "Power2.in"
+    })
 })
 
 
@@ -117,7 +128,7 @@ onMounted(()=>{
         <div class="block-container">
             <div class="text-container-preis">
                 <h3 class="title-text" ref="text1_subtitle">Faire Preise</h3>
-                <p class="text preis" ref="text1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
+                <p class="text preis" ref="text1">Bei uns stehen faire Preise an erster Stelle. Unsere transparente Preisgestaltung stellt sicher, dass Sie qualitativ hochwertige Reinigung erhalten.</p>
             </div>
         </div>
         <div class="img-container">
@@ -126,7 +137,7 @@ onMounted(()=>{
         <div class="block-container">
             <div class="text-container-zeit">
                 <h3 class="title-text" ref="text2_subtitle">Zeitintervalle</h3>
-                <p class="text zeit" ref="text2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
+                <p class="text zeit" ref="text2">Wir bieten flexible Zeitintervalle an, um Ihren Zeitplan zu erfüllen. Ganz gleich, ob Sie eine wöchentliche, monatliche oder einmalige Reinigung wünschen.</p>
             </div>
            
         </div>
@@ -135,14 +146,20 @@ onMounted(()=>{
         <div class="third-container">
             <div class="text-container-gz">
                 <h3 class="title-text" ref="text3_subtitle">Geräte und Zubehör</h3>
-                <p class="text gz" ref="text3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
+                <p class="text gz" ref="text3">Unsere modernen Reinigungsgeräte und umweltfreundlichen Reinigungsmittel sorgen nicht nur für eine gründliche Reinigung, sondern schonen auch die Umwelt und Ihre Gesundheit.</p>
                 
         </div>
         <div class="text-container-angebot">
                 <h3 class="title-text" ref="text4_subtitle">Ihr persönliches Angebot</h3>
-                <p class="text angebot" ref="text4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quam, reprehenderit inventore asperiores maiores laudantium</p>
+                <p class="text angebot" ref="text4">Wir hören Ihnen zu und arbeiten eng mit Ihnen zusammen, um sicherzustellen, dass unsere Dienstleistungen Ihren individuellen Anforderungen entsprechen.</p>
             </div>
 
+        </div>
+        <div class="text-container-quality" ref="text_quality">
+            <h3 class="title">Qualität</h3>
+            <p class="text quality">Wir setzen alles daran, sicherzustellen, dass unsere Kunden nicht nur zufrieden sind, sondern begeistert von unseren Reinigungsdienstleistungen sind.
+
+            </p>
         </div>
 
         
@@ -210,11 +227,6 @@ onMounted(()=>{
 }
 .text-container-angebot {
     display: block;
-   
-    
-   
-    
-
 }
 
 @media only screen and (width <= 700px){
@@ -247,5 +259,23 @@ onMounted(()=>{
     margin-left: 15%;
   margin-right: 15%;
 }
+}
+.text-container-quality{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80%;
+    left: 0;
+    right: 0;
+    color: $white;
+    font-size: 30px;
+    top:140px;
+    background-color: $black;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.400);
+    margin-top: 30px;
+    padding-bottom: 20px;
+    padding-top: 2px;
+  
 }
 </style>

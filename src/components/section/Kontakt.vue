@@ -14,7 +14,7 @@ const subtitle_mail = ref(null);
 <template>
     <div class="main-container">
       <div class="line"></div>
-        <h1 class="title">Kontaktieren Sie uns!</h1>
+        <h1 class="title">Kontaktieren Sie uns noch heute!</h1>
         <p class="p">So können Sie mit uns Kontakt aufnehmen.</p>
 
         <div class="formular-info-contaier">
@@ -27,17 +27,12 @@ const subtitle_mail = ref(null);
             </p>
             <h3 class="subtitle" ref="subtitle_adresse">Adresse</h3>
             <p class="text-subtitle">
-            Bethovenstraße
-            22083 Hamburg</p>
+            Bethovenstraße 44, 22083 Hamburg</p>
             <h3 class="subtitle"></h3>
           </div>
           <div class="formular">
             
             <div class="container-input">
-                <div class="header-titulos">
-                    <p class="p">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                </div>
-                
                 <form action="https://formsubmit.co/reynagafarias@gmail.com" method="post">
                     
                 <label class="label-input"  for="name">Name / Firma (Pflichfeld)*</label>
@@ -65,14 +60,7 @@ const subtitle_mail = ref(null);
         </div>
         <h1 class="title">Wo finden Sie uns?</h1>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.274257380938!2d-70.56068388481569!3d41.45496659976631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e52963ac45bbcb%3A0xf05e8d125e82af10!2sDos%20Mas!5e0!3m2!1sen!2sus!4v1671220374408!5m2!1sen!2sus" 
-            width="600" 
-            height="450" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2368.88456455705!2d10.025611076466964!3d53.57767675738986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18932d133a275%3A0x80a39835a4f09142!2sBeethovenstra%C3%9Fe%2044%2C%2022083%20Hamburg!5e0!3m2!1ses-419!2sde!4v1698961035249!5m2!1ses-419!2sde"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       
     </div>
@@ -115,7 +103,8 @@ const subtitle_mail = ref(null);
   display: flex;
   justify-content: center;
   margin-left: 35%;
-  padding-top: 20px;
+  
+ 
 
  
   
@@ -124,6 +113,7 @@ const subtitle_mail = ref(null);
   display: flex;
   justify-content: center;
   margin-left: 35%;
+  margin-top: 24px;
   
 }
 .info-kontakt{
@@ -165,6 +155,7 @@ const subtitle_mail = ref(null);
     justify-content: center;
     padding: 10px;
     box-sizing: border-box;
+    text-align: center;
     
     
     

@@ -109,9 +109,9 @@ onMounted(()=>{
             </CarouselIndicator>
         </div>
         <div class="title-container">
-            <h1 class="title-home" ref="title">Schön Sauber</h1>
+            <h1 class="title-home" ref="title">Schnell Sauber</h1>
             <p class="subtitle" ref="subtitle">
-                Lorem ipsum, dolor sit amet consectetur adipi
+                Ihr partner für glänzende Ergebnisse.
             </p>
             <a href="#kontakt" class="button" ref="button">
                 <p class="a-text"> Kontaktieren Sie uns!</p>

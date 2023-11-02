@@ -118,79 +118,61 @@ onMounted(()=>{
 
 <template>
     <div class="container-img">
-        <img ref="img" src="./img/layout.png" alt="" class="img">
         <h1 ref="title" class="title">Unsere Services</h1>
         <div class="divider"></div>
         <div class="items-main-container">
             <div class="items-inner-container">
                
-                <div ref="item1" class="item">
-                    <p class="text">
-                    Büroreinigung
-                    </p>
+                <div ref="item1" class="item-div a">
+                    <p class="text">Büroreinigung</p>
+                    <p class="text-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nulla hic voluptatibus fugiat aspernatur perspiciatis.</p>
                 </div>
-                <div ref="item2" class="item">
-                    <p class="text">
-                        Glasreinigung
-                    </p>
+                <div ref="item2" class="item-div b">
+                    <p class="text">Glasreinigung</p>
+                    <p class="text-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nulla hic voluptatibus fugiat aspernatur perspiciatis</p>
                 </div>
-                <div ref="item3" class="item">
-                    <p class="text">
-                        Küchen
-                    </p>
+                <div ref="item3" class="item-div c">
+                    <p class="text">Küchen</p>
+                    <p class="text-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nulla hic voluptatibus fugiat aspernatur perspiciatis</p>
                 </div>
-                <div ref="item4" class="item">
-                    <p class="text">
-                         Toiletten
-                    </p>
+                <div ref="item4" class="item-div d">
+                    <p class="text">Toiletten</p>
+                    <p class="text-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nulla hic voluptatibus fugiat aspernatur perspiciatis</p>
                 </div>
-                <div ref="item5" class="item">
-                    <p class="text">
-                        Bars
-                    </p>
+                <div ref="item5" class="item-div e">
+                    <p class="text">Bars</p>
+                    <p class="text-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nulla hic voluptatibus fugiat aspernatur perspiciatis</p>
                 </div>
-                <div ref="item6" class="item">
-                    <p class="text">
-                        Konferenzräume
-                    </p>
+                <div ref="item6" class="item-div f">
+                    <p class="text">Konferenzräume</p>
+                    <p class="text-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nulla hic voluptatibus fugiat aspernatur perspiciatis</p>
                 </div>
-                <div ref="item7" class="item">
-                    <p class="text">
-                        Praxisreinigung
-                    </p>
+                <div ref="item7" class="item-div g">
+                    <p class="text">Praxisreinigung</p>
+                    <p class="text-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nulla hic voluptatibus fugiat aspernatur perspiciatis</p>
                 </div>
-                <div ref="item8" class="item">
-                    <p class="text">
-                        Lagerhallen
-                    </p>
+                <div ref="item8" class="item-div h">
+                    <p class="text">Lagerhallen </p>
+                    <p class="text-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nulla hic voluptatibus fugiat aspernatur perspiciatis</p>
                 </div>
-                <div ref="item9" class="item">
-                    <p class="text">
-                        Schulen
-                    </p>
+                <div ref="item9" class="item-div i">
+                    <p class="text">Schulen</p>
+                    <p class="text-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nulla hic voluptatibus fugiat aspernatur perspiciatis</p>
                 </div>
                
                 
             </div>             
         </div>
+        <img ref="img" src="./img/layout.png" alt="" class="img">
     </div>
 </template>
 <style lang="scss" scoped>
-.container-img{
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    height: 800px;
-    width: 100%;
-    
 
-}
 .img{
     width: 100%;
     height: 100%;
     object-fit:cover;
-    object-position:0%;
-    animation-name: smoothMoves;
+    object-position:55%;
     animation-duration: 3s;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
@@ -198,66 +180,53 @@ onMounted(()=>{
     filter: brightness(.5);
 }
 
-@keyframes smoothMoves{
-    0%{
-        width: 100%;
-        height: 100%;
-        object-fit:cover;
-        object-position:0%;
-    }
-    100%{
-        width: 100%;
-        height: 100%;
-        object-fit:cover;
-        object-position:58%;
-        transition: 5s;
-    }
+
+.container-img{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    width: 100%;
 }
 .items-main-container{
-    left: 0;
+    
     position: absolute;
-    background-color: transparent;
-    width: 50%;
-   
+    
+    width: 80%;
     z-index: 200;
+    flex-wrap: wrap;
+    
     
 }
 .items-inner-container{
-    
-    display: block;
+    background-color: transparent;
+    display: flex;
     justify-content: center;
     margin-top: 100px;
     z-index: 300;
     height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    
 }
-.item{
-    display:flex;
-    justify-content: right;
-    text-align: center;
-    margin-top: -10px;
-    font-size: 20px;
-   
+.item-div{
+    width: 30%;
+    height: 100px;
+    background-color: rgba($color: #000000, $alpha: .2);
+    border-radius:5px;
+    margin: 15px;
   
-}
-.div-empty{
-    right: 0;
-    position: absolute;
-    width: 50%;
-    height: 800px;
-    background-color: transparent;
-    z-index: 100;
 }
 
 
 .text{
     display: block;
-    justify-content: left;
-    width: 170px;
     height: auto;
-    border-radius: 5%;
     font-size: 20px;
-    padding: 5px;
+    padding-top: 5px;
     color: $white;
+    text-align: center;
+    margin-top: 30px;
     
 }
 
@@ -273,4 +242,62 @@ onMounted(()=>{
         z-index: 500;
         margin-top: 65px;
     }
+
+@media screen and (width <= 550px){
+    .items-inner-container{
+        display: block;
+        width: 100%;
+
+    }
+    .item-div{
+        display: block;
+        margin: auto;
+        width: 80%;
+        height: 50px;
+        margin: 15px;
+
+    }
+    .img{
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        object-position:56%;
+    }
+}
+@media screen and (width >= 1000px){
+    .items-main-container{
+    position: absolute;
+    width: 90%;
+    z-index: 200;
+    flex-wrap: wrap;
+    
+    
+    
+}
+.items-inner-container{
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    z-index: 300;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+.item-div{
+    width: 30%;
+    height: 210px;
+    background-color: rgba($color: #000000, $alpha: .2);
+    border-radius:5px;
+    margin: 15px;
+  
+}
+.text-items{
+    color:$white;
+    padding: 10px;
+    text-align: center;
+
+}
+}
 </style>

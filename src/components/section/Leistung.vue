@@ -32,15 +32,14 @@ onMounted(()=>{
 
 </script>
 <template>
-
 <div class="main-container" >
     <div class="container" ref="textoRight" >
         <h1 class="title">Über uns</h1>
-        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos neque ad assumenda mollitia ea eaque laboriosam amet dignissimos, quibusdam aliquam consequatur sapiente dolorem culpa, vero, ipsum eveniet dicta veritatis eum!0</p>
+        <p class="text">Wir sind eine leidenschaftliche Reinigungsfirma aus Hamburg, die Sauberkeit und Zufriedenheit in den Mittelpunkt stellt. Unsere Mitarbeiter liefern erstklassigen Service und strahlende Ergebnisse</p>
     </div>
     <div class="container" ref="textoLeft" >
         <h1 class="title">Leistung</h1>
-        <p class="text botton">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos neque ad assumenda mollitia ea eaque laboriosam amet dignissimos, quibusdam aliquam consequatur sapiente dolorem culpa, vero, ipsum eveniet dicta veritatis eum!0</p>
+        <p class="text botton">Wir bieten Spitzenqualität in jeder Reinigungsaufgabe. Verlassen Sie sich auf uns, um Ihre Erwartungen in kurzer Zeit zu erfüllen und makellose Sauberkeit zu gewährleisten</p>
     </div>
     <div class="photos-container">
         <PhotosPres></PhotosPres>
