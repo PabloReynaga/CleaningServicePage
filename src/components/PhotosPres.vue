@@ -265,11 +265,7 @@ onMounted(()=>{
         object-fit:cover;
         object-position:56%;
     }
-    .text{
-        color: red;
-        vertical-align: center;
-
-    }
+    
    
 }
 @media screen and (width <= 1049px) {
