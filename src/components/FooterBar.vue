@@ -7,8 +7,9 @@ import { RouterLink } from 'vue-router';
         <div class="links-container">
             <div class="links-container">
                 <a href="#home" class="links">Home</a>
-                <a href="" class="links">Datenschutz</a>
-                <router-link to="/impressum" class="links">Impressum</router-link>
+                <a href="#home" class="links">Datenschutz</a>
+                <a href="#home" class="links">Impressum</a>
+                <!-- <router-link to="/impressum" class="links">Impressum</router-link> -->
             </div>
         
         

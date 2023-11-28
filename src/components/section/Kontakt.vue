@@ -5,16 +5,42 @@ import { onMounted, ref } from 'vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const subtitle_telefon = ref(null);
-const subtitle_adresse = ref(null);
-const subtitle_mail = ref(null);
+const title = ref(null);
+const button = ref(null);
 
+onMounted(()=>{
+  gsap.from(title.value,{
+        scrollTrigger:{
+          trigger: title.value,
+          toggleActions:"restart none none none",
+        },
+        y: 20,
+        duration:.4,
+        delay:.2,
+        repeat:2,
+        yoyo:true
+        
+    })
+    gsap.from(button.value,{
+        scrollTrigger:{
+          trigger: button.value,
+          toggleActions:"restart none none none",
+        },
+        y: 20,
+        duration:.6,
+        delay:.2,
+       
+        
+    })
+    
+
+})
 
 </script>
 <template>
     <div class="main-container">
       <div class="line"></div>
-        <h1 class="title">Kontaktieren Sie uns noch heute!</h1>
+        <h1 class="title" ref="title">Kontaktieren Sie uns noch heute!</h1>
         <p class="p">So können Sie mit uns Kontakt aufnehmen.</p>
 
         <div class="formular-info-contaier">
@@ -48,7 +74,7 @@ const subtitle_mail = ref(null);
                 <textarea class="text-area-field" type="text" id="massage" name="Mensaje" placeholder="Nachricht hier eingeben"
                 ></textarea>
                 <div class="button-container">
-                  <button class="button">Senden</button>
+                  <button ref="button" class="button">Senden</button>
                 </div>
                 
                 </form>
@@ -177,6 +203,7 @@ const subtitle_mail = ref(null);
     padding: 8px;
     border: 1px solid $black;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
     
     
    
